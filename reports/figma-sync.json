@@ -1,0 +1,18 @@
+{
+  "about": "Prototype main screens captured into Figma for manual design review. The user edits the working frames; the locked baseline copies are the untouched originals, used to detect what changed.",
+  "fileKey": "mIrk71d9YcXIlABeiArTpn",
+  "page": "Lab 2",
+  "workingSection": { "id": "10877:228283", "name": "From Claude" },
+  "baselineSection": { "id": "10886:136879", "name": "Claude baseline – do not edit (used to detect your changes)" },
+  "capturedOn": "2026-11-05",
+  "capturedAt": "1440x900, light theme, from the dev server",
+  "frames": [
+    { "name": "01 · AI Agents – Empty state", "working": "10878:17702", "baseline": "10886:136880", "code": ["src/components/AgentStarter.tsx", "src/components/create/PromptBox.tsx", "src/components/AgentTags.tsx", "src/pages/AgentsPage.tsx"] },
+    { "name": "02 · AI Agents – List (grid)", "working": "10879:17702", "baseline": "10886:137192", "code": ["src/components/AgentGrid.tsx", "src/components/AgentTags.tsx", "src/pages/AgentsPage.tsx"] },
+    { "name": "03 · AI Agents – List (table)", "working": "10880:17702", "baseline": "10886:137898", "code": ["src/components/AgentTable.tsx", "src/components/AgentTags.tsx"] },
+    { "name": "04 · Templates – Gallery + details drawer", "working": "10885:17702", "baseline": "10886:138518", "code": ["src/pages/templates/FigmaVersion.tsx", "src/pages/templates/shared.tsx", "src/components/templates/TemplateParts.tsx"] },
+    { "name": "05 · Builder – Builder assistant (setup)", "working": "10882:17702", "baseline": "10886:139100", "code": ["src/pages/BuilderPage.tsx", "src/builder/AssistantPanel.tsx", "src/builder/chat/*", "src/builder/Canvas.tsx"] },
+    { "name": "06 · Builder – Test Flow", "working": "10883:17702", "baseline": "10886:139481", "code": ["src/builder/AssistantPanel.tsx", "src/builder/chat/Composer.tsx", "src/builder/Canvas.tsx"] }
+  ],
+  "captureScript": "scratchpad capture.mjs (CDP + static snapshot + html_to_figma); copy kept in prototype/scripts/figma-capture.mjs"
+}

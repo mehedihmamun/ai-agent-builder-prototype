@@ -1,0 +1,3559 @@
+{
+ "roles": {
+  "green-90": {
+   "text": [
+    "builder/AssistantPanel.tsx:37",
+    "builder/AssistantPanel.tsx:40",
+    "builder/Canvas.tsx:118",
+    "builder/chat/ActionList.tsx:15",
+    "builder/chat/QuestionCard.tsx:102"
+   ],
+   "border": [
+    "builder/Canvas.tsx:64",
+    "builder/Canvas.tsx:66"
+   ],
+   "bg": [
+    "builder/Canvas.tsx:74",
+    "builder/Canvas.tsx:82",
+    "builder/Canvas.tsx:90",
+    "components/templates/TemplateParts.tsx:35"
+   ]
+  },
+  "black": {
+   "text": [
+    "builder/AssistantPanel.tsx:39",
+    "builder/Canvas.tsx:117",
+    "components/templates/TemplateParts.tsx:14"
+   ],
+   "bg": [
+    "builder/AssistantPanel.tsx:58",
+    "builder/Canvas.tsx:238",
+    "builder/chat/Composer.tsx:61",
+    "components/IntroModal.tsx:39",
+    "pages/BuilderPage.tsx:139",
+    "pages/templates/FigmaVersion.tsx:39"
+   ]
+  },
+  "green-100": {
+   "text": [
+    "builder/AssistantPanel.tsx:41",
+    "builder/Canvas.tsx:119",
+    "components/AgentTags.tsx:6",
+    "components/AgentTags.tsx:15",
+    "components/templates/TemplateParts.tsx:10",
+    "components/templates/TemplateParts.tsx:12",
+    "components/templates/TemplateParts.tsx:13"
+   ]
+  },
+  "yellow-100": {
+   "text": [
+    "builder/AssistantPanel.tsx:42",
+    "builder/Canvas.tsx:120",
+    "components/AgentTags.tsx:8"
+   ]
+  },
+  "blue-90": {
+   "text": [
+    "builder/AssistantPanel.tsx:43",
+    "builder/AssistantPanel.tsx:44",
+    "builder/AssistantPanel.tsx:46",
+    "builder/AssistantPanel.tsx:95",
+    "builder/AssistantPanel.tsx:98",
+    "builder/Canvas.tsx:121",
+    "builder/Canvas.tsx:122",
+    "builder/Canvas.tsx:124",
+    "components/AgentStarter.tsx:46"
+   ],
+   "border": [
+    "builder/Canvas.tsx:62",
+    "components/create/PromptBox.tsx:116"
+   ],
+   "bg": [
+    "builder/chat/Composer.tsx:65",
+    "components/IntroModal.tsx:48"
+   ]
+  },
+  "purple-100": {
+   "text": [
+    "builder/AssistantPanel.tsx:45",
+    "builder/AssistantPanel.tsx:162",
+    "builder/Canvas.tsx:123",
+    "builder/tabs.tsx:33",
+    "components/AgentTags.tsx:7",
+    "components/templates/TemplateParts.tsx:7"
+   ],
+   "bg": [
+    "builder/Canvas.tsx:92",
+    "components/templates/TemplateParts.tsx:43"
+   ]
+  },
+  "gray-100": {
+   "text": [
+    "builder/AssistantPanel.tsx:57",
+    "builder/AssistantPanel.tsx:66",
+    "builder/AssistantPanel.tsx:81",
+    "builder/AssistantPanel.tsx:101",
+    "builder/AssistantPanel.tsx:139",
+    "builder/AssistantPanel.tsx:161",
+    "builder/AssistantPanel.tsx:168",
+    "builder/AssistantPanel.tsx:248",
+    "builder/AssistantPanel.tsx:271",
+    "builder/AssistantPanel.tsx:324",
+    "builder/Canvas.tsx:79",
+    "builder/Canvas.tsx:97",
+    "builder/Canvas.tsx:103",
+    "builder/Canvas.tsx:106",
+    "builder/Canvas.tsx:135",
+    "builder/Canvas.tsx:136",
+    "builder/Canvas.tsx:233",
+    "builder/Canvas.tsx:244",
+    "builder/chat/ActionList.tsx:17",
+    "builder/chat/ActionList.tsx:19",
+    "builder/chat/ActionList.tsx:20",
+    "builder/chat/Composer.tsx:34",
+    "builder/chat/Composer.tsx:54",
+    "builder/chat/Composer.tsx:56",
+    "builder/chat/Composer.tsx:69",
+    "builder/chat/Composer.tsx:74",
+    "builder/chat/Composer.tsx:75",
+    "builder/chat/QuestionCard.tsx:84",
+    "builder/chat/QuestionCard.tsx:99",
+    "builder/chat/QuestionCard.tsx:106",
+    "builder/chat/QuestionCard.tsx:113",
+    "builder/chat/QuestionCard.tsx:128",
+    "builder/chat/QuestionCard.tsx:145",
+    "builder/chat/QuestionCard.tsx:153",
+    "builder/chat/SummaryCard.tsx:26",
+    "builder/tabs.tsx:16",
+    "builder/tabs.tsx:26",
+    "builder/tabs.tsx:36",
+    "components/AgentGrid.tsx:38",
+    "components/AgentStarter.tsx:29",
+    "components/AgentStarter.tsx:38",
+    "components/AgentStarter.tsx:46",
+    "components/AgentStarter.tsx:62",
+    "components/AgentStarter.tsx:81",
+    "components/AgentTable.tsx:43",
+    "components/AgentTags.tsx:33",
+    "components/DemoControls.tsx:28",
+    "components/DemoControls.tsx:38",
+    "components/IntroModal.tsx:62",
+    "components/create/AttachMenu.tsx:80",
+    "components/create/AttachMenu.tsx:83",
+    "components/create/AttachMenu.tsx:87",
+    "components/create/AttachMenu.tsx:90",
+    "components/create/AttachMenu.tsx:94",
+    "components/create/AttachMenu.tsx:97",
+    "components/create/AttachMenu.tsx:118",
+    "components/create/AttachMenu.tsx:122",
+    "components/create/AttachMenu.tsx:125",
+    "components/create/PromptBox.tsx:169",
+    "pages/AgentsPage.tsx:33",
+    "pages/AgentsPage.tsx:51",
+    "pages/AgentsPage.tsx:81",
+    "pages/BuilderPage.tsx:109",
+    "pages/templates/FigmaVersion.tsx:50",
+    "pages/templates/FigmaVersion.tsx:51",
+    "pages/templates/shared.tsx:43",
+    "pages/templates/shared.tsx:62",
+    "pages/templates/shared.tsx:76",
+    "pages/templates/shared.tsx:88"
+   ],
+   "bg": [
+    "builder/Canvas.tsx:238",
+    "builder/chat/Composer.tsx:61",
+    "components/IntroModal.tsx:73"
+   ]
+  },
+  "white": {
+   "text": [
+    "builder/AssistantPanel.tsx:58",
+    "builder/AssistantPanel.tsx:292",
+    "builder/Canvas.tsx:74",
+    "builder/Canvas.tsx:92",
+    "builder/Canvas.tsx:238",
+    "builder/chat/Composer.tsx:61",
+    "builder/chat/Composer.tsx:65",
+    "builder/chat/QuestionCard.tsx:84",
+    "builder/chat/SparkleBadge.tsx:8",
+    "components/IntroModal.tsx:43",
+    "components/IntroModal.tsx:48",
+    "components/IntroModal.tsx:54",
+    "components/templates/TemplateParts.tsx:35",
+    "components/templates/TemplateParts.tsx:43",
+    "pages/BuilderPage.tsx:139"
+   ],
+   "bg": [
+    "builder/AssistantPanel.tsx:74",
+    "builder/AssistantPanel.tsx:139",
+    "builder/AssistantPanel.tsx:240",
+    "builder/AssistantPanel.tsx:324",
+    "builder/Canvas.tsx:73",
+    "builder/Canvas.tsx:89",
+    "builder/Canvas.tsx:132",
+    "builder/Canvas.tsx:241",
+    "builder/Canvas.tsx:250",
+    "builder/chat/ActionList.tsx:7",
+    "builder/chat/Composer.tsx:32",
+    "builder/chat/QuestionCard.tsx:84",
+    "builder/chat/QuestionCard.tsx:92",
+    "builder/chat/SummaryCard.tsx:18",
+    "builder/tabs.tsx:26",
+    "builder/tabs.tsx:32",
+    "builder/tabs.tsx:78",
+    "components/AgentGrid.tsx:24",
+    "components/AgentStarter.tsx:46",
+    "components/AgentStarter.tsx:74",
+    "components/AgentTable.tsx:25",
+    "components/IntroModal.tsx:54",
+    "components/create/PromptBox.tsx:116",
+    "layout/AppShell.tsx:36",
+    "pages/AgentsPage.tsx:29",
+    "pages/AgentsPage.tsx:42",
+    "pages/BuilderPage.tsx:65",
+    "pages/BuilderPage.tsx:68",
+    "pages/templates/FigmaVersion.tsx:40",
+    "pages/templates/FigmaVersion.tsx:74",
+    "pages/templates/shared.tsx:72"
+   ]
+  },
+  "foreground": {
+   "text": [
+    "builder/AssistantPanel.tsx:74",
+    "builder/AssistantPanel.tsx:81",
+    "builder/AssistantPanel.tsx:121",
+    "builder/AssistantPanel.tsx:164",
+    "builder/AssistantPanel.tsx:243",
+    "builder/AssistantPanel.tsx:256",
+    "builder/AssistantPanel.tsx:270",
+    "builder/Canvas.tsx:78",
+    "builder/Canvas.tsx:96",
+    "builder/chat/ActionList.tsx:19",
+    "builder/chat/Composer.tsx:54",
+    "builder/chat/Composer.tsx:56",
+    "builder/chat/QuestionCard.tsx:99",
+    "builder/chat/QuestionCard.tsx:99",
+    "builder/chat/QuestionCard.tsx:112",
+    "builder/chat/QuestionCard.tsx:127",
+    "builder/chat/QuestionCard.tsx:145",
+    "builder/chat/SummaryCard.tsx:20",
+    "builder/chat/SummaryCard.tsx:27",
+    "builder/tabs.tsx:15",
+    "builder/tabs.tsx:35",
+    "builder/tabs.tsx:64",
+    "components/AgentGrid.tsx:36",
+    "components/AgentStarter.tsx:28",
+    "components/AgentStarter.tsx:79",
+    "components/AgentTable.tsx:32",
+    "components/IntroModal.tsx:61",
+    "components/create/AttachMenu.tsx:45",
+    "components/create/AttachMenu.tsx:66",
+    "pages/AgentsPage.tsx:32",
+    "pages/AgentsPage.tsx:80",
+    "pages/BuilderPage.tsx:89",
+    "pages/templates/FigmaVersion.tsx:43",
+    "pages/templates/shared.tsx:42",
+    "pages/templates/shared.tsx:75",
+    "pages/templates/shared.tsx:87"
+   ]
+  },
+  "offwhite-80": {
+   "border": [
+    "builder/AssistantPanel.tsx:74",
+    "builder/chat/ActionList.tsx:7",
+    "builder/chat/ActionList.tsx:12",
+    "builder/chat/QuestionCard.tsx:84",
+    "builder/chat/QuestionCard.tsx:92",
+    "builder/chat/QuestionCard.tsx:93",
+    "builder/chat/SummaryCard.tsx:18",
+    "builder/chat/SummaryCard.tsx:19",
+    "builder/chat/SummaryCard.tsx:31",
+    "components/create/PromptBox.tsx:116"
+   ],
+   "bg": [
+    "builder/chat/Composer.tsx:34",
+    "builder/chat/Composer.tsx:69",
+    "components/AgentTags.tsx:33",
+    "components/create/AttachMenu.tsx:125"
+   ]
+  },
+  "offwhite-60": {
+   "bg": [
+    "builder/AssistantPanel.tsx:81",
+    "builder/Canvas.tsx:233",
+    "builder/Canvas.tsx:298",
+    "builder/chat/Composer.tsx:34",
+    "builder/chat/Composer.tsx:37",
+    "builder/chat/Composer.tsx:69",
+    "builder/chat/QuestionCard.tsx:99",
+    "pages/templates/FigmaVersion.tsx:56"
+   ],
+   "border": [
+    "components/AgentStarter.tsx:74"
+   ]
+  },
+  "blue-60": {
+   "border": [
+    "builder/AssistantPanel.tsx:139",
+    "builder/AssistantPanel.tsx:324",
+    "components/AgentStarter.tsx:46"
+   ],
+   "ring": [
+    "builder/chat/QuestionCard.tsx:122",
+    "builder/chat/QuestionCard.tsx:135"
+   ]
+  },
+  "blue-20": {
+   "bg": [
+    "builder/AssistantPanel.tsx:139",
+    "builder/AssistantPanel.tsx:324",
+    "builder/chat/QuestionCard.tsx:122",
+    "builder/chat/QuestionCard.tsx:135",
+    "components/AgentStarter.tsx:46"
+   ]
+  },
+  "border": {
+   "border": [
+    "builder/AssistantPanel.tsx:139",
+    "builder/AssistantPanel.tsx:240",
+    "builder/AssistantPanel.tsx:324",
+    "builder/Canvas.tsx:132",
+    "builder/Canvas.tsx:241",
+    "builder/Canvas.tsx:250",
+    "builder/chat/Composer.tsx:32",
+    "builder/tabs.tsx:32",
+    "builder/tabs.tsx:78",
+    "components/AgentGrid.tsx:24",
+    "components/AgentStarter.tsx:46",
+    "components/AgentTable.tsx:25",
+    "components/create/AttachMenu.tsx:118",
+    "layout/AppShell.tsx:39",
+    "pages/AgentsPage.tsx:42",
+    "pages/BuilderPage.tsx:68",
+    "pages/BuilderPage.tsx:182",
+    "pages/templates/FigmaVersion.tsx:58",
+    "pages/templates/FigmaVersion.tsx:74",
+    "pages/templates/shared.tsx:72",
+    "pages/templates/shared.tsx:96"
+   ]
+  },
+  "offwhite-40": {
+   "bg": [
+    "builder/AssistantPanel.tsx:239",
+    "builder/chat/ActionList.tsx:12",
+    "builder/chat/QuestionCard.tsx:122",
+    "builder/chat/QuestionCard.tsx:135",
+    "builder/tabs.tsx:12",
+    "builder/tabs.tsx:64",
+    "components/DemoControls.tsx:38",
+    "components/create/AttachMenu.tsx:45",
+    "components/create/AttachMenu.tsx:118",
+    "pages/AgentsPage.tsx:75",
+    "pages/BuilderPage.tsx:89",
+    "pages/CreateAgentPage.tsx:14",
+    "pages/templates/FigmaVersion.tsx:83"
+   ]
+  },
+  "gray-40": {
+   "text": [
+    "builder/AssistantPanel.tsx:287",
+    "builder/AssistantPanel.tsx:291"
+   ],
+   "border": [
+    "builder/Canvas.tsx:154"
+   ]
+  },
+  "blue-40": {
+   "ring": [
+    "builder/Canvas.tsx:62",
+    "builder/chat/Composer.tsx:37"
+   ]
+  },
+  "green-40": {
+   "ring": [
+    "builder/Canvas.tsx:64"
+   ]
+  },
+  "gray-60": {
+   "bg": [
+    "builder/Canvas.tsx:69",
+    "builder/Canvas.tsx:102"
+   ]
+  },
+  "green-80": {
+   "border": [
+    "builder/Canvas.tsx:73",
+    "builder/Canvas.tsx:89"
+   ]
+  },
+  "red-90": {
+   "text": [
+    "builder/Canvas.tsx:81",
+    "builder/Canvas.tsx:104",
+    "components/create/PromptBox.tsx:134",
+    "components/create/PromptBox.tsx:146",
+    "components/create/PromptBox.tsx:158"
+   ],
+   "bg": [
+    "components/create/PromptBox.tsx:135"
+   ]
+  },
+  "offwhite-100": {
+   "bg": [
+    "builder/Canvas.tsx:252",
+    "components/AgentStarter.tsx:63",
+    "components/AgentStarter.tsx:65"
+   ]
+  },
+  "blue-100": {
+   "bg": [
+    "builder/chat/Composer.tsx:65"
+   ],
+   "text": [
+    "components/AgentTags.tsx:5",
+    "components/templates/TemplateParts.tsx:9"
+   ]
+  },
+  "primary": {
+   "border": [
+    "builder/chat/QuestionCard.tsx:84"
+   ],
+   "bg": [
+    "builder/chat/QuestionCard.tsx:84"
+   ]
+  },
+  "offwhite-20": {
+   "bg": [
+    "builder/chat/SummaryCard.tsx:19"
+   ]
+  },
+  "gray-20": {
+   "border": [
+    "builder/tabs.tsx:26"
+   ],
+   "bg": [
+    "components/IntroModal.tsx:73"
+   ]
+  },
+  "purple-10": {
+   "bg": [
+    "builder/tabs.tsx:33",
+    "components/AgentTags.tsx:7",
+    "components/templates/TemplateParts.tsx:7"
+   ]
+  },
+  "blue-30": {
+   "bg": [
+    "components/AgentTags.tsx:5",
+    "components/templates/TemplateParts.tsx:9"
+   ],
+   "ring": [
+    "components/create/PromptBox.tsx:117"
+   ]
+  },
+  "green-20": {
+   "bg": [
+    "components/AgentTags.tsx:6",
+    "components/AgentTags.tsx:15",
+    "components/templates/TemplateParts.tsx:10"
+   ]
+  },
+  "yellow-20": {
+   "bg": [
+    "components/AgentTags.tsx:8",
+    "components/templates/TemplateParts.tsx:14"
+   ]
+  },
+  "red-10": {
+   "bg": [
+    "components/AgentTags.tsx:9",
+    "components/create/PromptBox.tsx:146",
+    "components/create/PromptBox.tsx:146"
+   ]
+  },
+  "red-80": {
+   "text": [
+    "components/AgentTags.tsx:9"
+   ]
+  },
+  "navy-20": {
+   "bg": [
+    "components/AgentTags.tsx:10",
+    "components/templates/TemplateParts.tsx:8"
+   ]
+  },
+  "navy-100": {
+   "text": [
+    "components/AgentTags.tsx:10",
+    "components/templates/TemplateParts.tsx:8"
+   ]
+  },
+  "pitch-20": {
+   "bg": [
+    "components/AgentTags.tsx:16",
+    "components/templates/TemplateParts.tsx:6",
+    "components/templates/TemplateParts.tsx:11"
+   ]
+  },
+  "pitch-100": {
+   "text": [
+    "components/AgentTags.tsx:16"
+   ]
+  },
+  "yellow-80": {
+   "text": [
+    "components/IntroModal.tsx:44"
+   ]
+  },
+  "red-40": {
+   "ring": [
+    "components/create/PromptBox.tsx:146"
+   ]
+  },
+  "red-100": {
+   "text": [
+    "components/templates/TemplateParts.tsx:6",
+    "components/templates/TemplateParts.tsx:11"
+   ]
+  },
+  "green-10": {
+   "bg": [
+    "components/templates/TemplateParts.tsx:12",
+    "components/templates/TemplateParts.tsx:13"
+   ]
+  },
+  "purple-40": {
+   "ring": [
+    "pages/BuilderPage.tsx:118"
+   ]
+  },
+  "purple-20": {
+   "ring": [
+    "pages/BuilderPage.tsx:118"
+   ]
+  }
+ },
+ "contrast": {
+  "green-90": 3.33,
+  "black": 12.22,
+  "green-100": 5.05,
+  "yellow-100": 1.85,
+  "blue-90": 5.89,
+  "purple-100": 4.18,
+  "gray-100": 6.06,
+  "white": 1.0,
+  "foreground": 12.22,
+  "offwhite-80": 1.16,
+  "offwhite-60": 1.12,
+  "blue-60": 2.52,
+  "blue-20": 1.08,
+  "border": 1.21,
+  "offwhite-40": 1.07,
+  "gray-40": 1.94,
+  "blue-40": 1.38,
+  "green-40": 1.6,
+  "gray-60": 2.71,
+  "red-90": 5.03,
+  "green-80": 2.63,
+  "offwhite-100": 1.21,
+  "blue-100": 6.92,
+  "primary": 5.89,
+  "purple-40": 1.67,
+  "navy-100": 8.15,
+  "offwhite-20": 1.04,
+  "gray-20": 1.43,
+  "purple-10": 1.12,
+  "blue-30": 1.18,
+  "green-20": 1.25,
+  "yellow-20": 1.12,
+  "red-10": 1.18,
+  "red-80": 3.91,
+  "navy-20": 1.37,
+  "pitch-20": 1.21,
+  "pitch-100": 2.71,
+  "yellow-80": 1.64,
+  "red-40": 1.96,
+  "red-100": 7.25,
+  "green-10": 1.12,
+  "gray-80": 3.96
+ },
+ "items": [
+  {
+   "count": 5,
+   "where": [
+    "components/AiAgentIcon.tsx:9",
+    "components/AiAgentIcon.tsx:13",
+    "components/AiAgentIcon.tsx:15",
+    "components/AiAgentIcon.tsx:18",
+    "components/AiAgentIcon.tsx:22"
+   ],
+   "cat": "color",
+   "key": "#8C5FFF",
+   "status": "raw",
+   "info": "Hard-coded hex, not a design-system color"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/AiAgentIcon.tsx:5"
+   ],
+   "cat": "color",
+   "key": "#EDE6FF",
+   "status": "raw",
+   "info": "Hard-coded hex, not a design-system color"
+  },
+  {
+   "count": 70,
+   "where": [
+    "builder/AssistantPanel.tsx:57",
+    "builder/AssistantPanel.tsx:66",
+    "builder/AssistantPanel.tsx:81",
+    "builder/AssistantPanel.tsx:101",
+    "builder/AssistantPanel.tsx:139",
+    "builder/AssistantPanel.tsx:161",
+    "builder/AssistantPanel.tsx:168",
+    "builder/AssistantPanel.tsx:248",
+    "builder/AssistantPanel.tsx:271",
+    "builder/AssistantPanel.tsx:324",
+    "builder/Canvas.tsx:79",
+    "builder/Canvas.tsx:97",
+    "builder/Canvas.tsx:103",
+    "builder/Canvas.tsx:106",
+    "builder/Canvas.tsx:135",
+    "builder/Canvas.tsx:136",
+    "builder/Canvas.tsx:233",
+    "builder/Canvas.tsx:238",
+    "builder/Canvas.tsx:244",
+    "builder/chat/ActionList.tsx:17",
+    "builder/chat/ActionList.tsx:20",
+    "builder/chat/Composer.tsx:34",
+    "builder/chat/Composer.tsx:54",
+    "builder/chat/Composer.tsx:56",
+    "builder/chat/Composer.tsx:61",
+    "builder/chat/Composer.tsx:69",
+    "builder/chat/Composer.tsx:74",
+    "builder/chat/Composer.tsx:75",
+    "builder/chat/QuestionCard.tsx:84",
+    "builder/chat/QuestionCard.tsx:99",
+    "builder/chat/QuestionCard.tsx:106",
+    "builder/chat/QuestionCard.tsx:113",
+    "builder/chat/QuestionCard.tsx:128",
+    "builder/chat/QuestionCard.tsx:145",
+    "builder/chat/QuestionCard.tsx:153",
+    "builder/chat/SummaryCard.tsx:26",
+    "builder/tabs.tsx:16",
+    "builder/tabs.tsx:26",
+    "builder/tabs.tsx:36",
+    "components/AgentGrid.tsx:38",
+    "components/AgentStarter.tsx:29",
+    "components/AgentStarter.tsx:38",
+    "components/AgentStarter.tsx:46",
+    "components/AgentStarter.tsx:62",
+    "components/AgentStarter.tsx:81",
+    "components/AgentTable.tsx:43",
+    "components/AgentTags.tsx:33",
+    "components/DemoControls.tsx:28",
+    "components/DemoControls.tsx:38",
+    "components/IntroModal.tsx:62",
+    "components/create/AttachMenu.tsx:80",
+    "components/create/AttachMenu.tsx:83",
+    "components/create/AttachMenu.tsx:87",
+    "components/create/AttachMenu.tsx:90",
+    "components/create/AttachMenu.tsx:94",
+    "components/create/AttachMenu.tsx:97",
+    "components/create/AttachMenu.tsx:118",
+    "components/create/AttachMenu.tsx:122",
+    "components/create/AttachMenu.tsx:125",
+    "components/create/PromptBox.tsx:169",
+    "pages/AgentsPage.tsx:33",
+    "pages/AgentsPage.tsx:51",
+    "pages/AgentsPage.tsx:81",
+    "pages/BuilderPage.tsx:109",
+    "pages/templates/FigmaVersion.tsx:50",
+    "pages/templates/FigmaVersion.tsx:51",
+    "pages/templates/shared.tsx:43",
+    "pages/templates/shared.tsx:62",
+    "pages/templates/shared.tsx:76",
+    "pages/templates/shared.tsx:88"
+   ],
+   "cat": "color",
+   "key": "gray-100",
+   "status": "ok",
+   "info": "#4d657c"
+  },
+  {
+   "count": 45,
+   "where": [
+    "builder/AssistantPanel.tsx:58",
+    "builder/AssistantPanel.tsx:74",
+    "builder/AssistantPanel.tsx:139",
+    "builder/AssistantPanel.tsx:240",
+    "builder/AssistantPanel.tsx:292",
+    "builder/AssistantPanel.tsx:324",
+    "builder/Canvas.tsx:73",
+    "builder/Canvas.tsx:74",
+    "builder/Canvas.tsx:89",
+    "builder/Canvas.tsx:92",
+    "builder/Canvas.tsx:132",
+    "builder/Canvas.tsx:238",
+    "builder/Canvas.tsx:241",
+    "builder/Canvas.tsx:250",
+    "builder/chat/ActionList.tsx:7",
+    "builder/chat/Composer.tsx:32",
+    "builder/chat/Composer.tsx:61",
+    "builder/chat/Composer.tsx:65",
+    "builder/chat/QuestionCard.tsx:84",
+    "builder/chat/QuestionCard.tsx:92",
+    "builder/chat/SparkleBadge.tsx:8",
+    "builder/chat/SummaryCard.tsx:18",
+    "builder/tabs.tsx:26",
+    "builder/tabs.tsx:32",
+    "builder/tabs.tsx:78",
+    "components/AgentGrid.tsx:24",
+    "components/AgentStarter.tsx:46",
+    "components/AgentStarter.tsx:74",
+    "components/AgentTable.tsx:25",
+    "components/IntroModal.tsx:43",
+    "components/IntroModal.tsx:48",
+    "components/IntroModal.tsx:54",
+    "components/templates/TemplateParts.tsx:35",
+    "components/templates/TemplateParts.tsx:43",
+    "layout/AppShell.tsx:36",
+    "pages/AgentsPage.tsx:29",
+    "pages/AgentsPage.tsx:42",
+    "pages/BuilderPage.tsx:65",
+    "pages/BuilderPage.tsx:68",
+    "pages/BuilderPage.tsx:139",
+    "pages/templates/FigmaVersion.tsx:40",
+    "pages/templates/FigmaVersion.tsx:74",
+    "pages/templates/shared.tsx:72"
+   ],
+   "cat": "color",
+   "key": "white",
+   "status": "ok",
+   "info": "#ffffff"
+  },
+  {
+   "count": 35,
+   "where": [
+    "builder/AssistantPanel.tsx:74",
+    "builder/AssistantPanel.tsx:81",
+    "builder/AssistantPanel.tsx:121",
+    "builder/AssistantPanel.tsx:164",
+    "builder/AssistantPanel.tsx:243",
+    "builder/AssistantPanel.tsx:256",
+    "builder/AssistantPanel.tsx:270",
+    "builder/Canvas.tsx:78",
+    "builder/Canvas.tsx:96",
+    "builder/chat/Composer.tsx:54",
+    "builder/chat/Composer.tsx:56",
+    "builder/chat/QuestionCard.tsx:99",
+    "builder/chat/QuestionCard.tsx:112",
+    "builder/chat/QuestionCard.tsx:127",
+    "builder/chat/QuestionCard.tsx:145",
+    "builder/chat/SummaryCard.tsx:20",
+    "builder/chat/SummaryCard.tsx:27",
+    "builder/tabs.tsx:15",
+    "builder/tabs.tsx:35",
+    "builder/tabs.tsx:64",
+    "components/AgentGrid.tsx:36",
+    "components/AgentStarter.tsx:28",
+    "components/AgentStarter.tsx:79",
+    "components/AgentTable.tsx:32",
+    "components/IntroModal.tsx:61",
+    "components/create/AttachMenu.tsx:45",
+    "components/create/AttachMenu.tsx:66",
+    "pages/AgentsPage.tsx:32",
+    "pages/AgentsPage.tsx:80",
+    "pages/BuilderPage.tsx:89",
+    "pages/templates/FigmaVersion.tsx:43",
+    "pages/templates/shared.tsx:42",
+    "pages/templates/shared.tsx:75",
+    "pages/templates/shared.tsx:87"
+   ],
+   "cat": "color",
+   "key": "foreground",
+   "status": "ok",
+   "info": "#253748"
+  },
+  {
+   "count": 20,
+   "where": [
+    "builder/AssistantPanel.tsx:139",
+    "builder/AssistantPanel.tsx:240",
+    "builder/AssistantPanel.tsx:324",
+    "builder/Canvas.tsx:241",
+    "builder/Canvas.tsx:250",
+    "builder/chat/Composer.tsx:32",
+    "builder/tabs.tsx:32",
+    "builder/tabs.tsx:78",
+    "components/AgentGrid.tsx:24",
+    "components/AgentStarter.tsx:46",
+    "components/AgentTable.tsx:25",
+    "components/create/AttachMenu.tsx:118",
+    "layout/AppShell.tsx:39",
+    "pages/AgentsPage.tsx:42",
+    "pages/BuilderPage.tsx:68",
+    "pages/BuilderPage.tsx:182",
+    "pages/templates/FigmaVersion.tsx:58",
+    "pages/templates/FigmaVersion.tsx:74",
+    "pages/templates/shared.tsx:72",
+    "pages/templates/shared.tsx:96"
+   ],
+   "cat": "color",
+   "key": "border",
+   "status": "ok",
+   "info": "#e6eaed"
+  },
+  {
+   "count": 13,
+   "where": [
+    "builder/AssistantPanel.tsx:37",
+    "builder/AssistantPanel.tsx:40",
+    "builder/Canvas.tsx:64",
+    "builder/Canvas.tsx:66",
+    "builder/Canvas.tsx:74",
+    "builder/Canvas.tsx:82",
+    "builder/Canvas.tsx:90",
+    "builder/Canvas.tsx:118",
+    "builder/Canvas.tsx:208",
+    "builder/Canvas.tsx:209",
+    "builder/chat/ActionList.tsx:15",
+    "builder/chat/QuestionCard.tsx:102",
+    "components/templates/TemplateParts.tsx:35"
+   ],
+   "cat": "color",
+   "key": "green-90",
+   "status": "ok",
+   "info": "#18a326"
+  },
+  {
+   "count": 13,
+   "where": [
+    "builder/AssistantPanel.tsx:74",
+    "builder/chat/ActionList.tsx:7",
+    "builder/chat/ActionList.tsx:12",
+    "builder/chat/Composer.tsx:34",
+    "builder/chat/Composer.tsx:69",
+    "builder/chat/QuestionCard.tsx:84",
+    "builder/chat/QuestionCard.tsx:92",
+    "builder/chat/QuestionCard.tsx:93",
+    "builder/chat/SummaryCard.tsx:18",
+    "builder/chat/SummaryCard.tsx:19",
+    "builder/chat/SummaryCard.tsx:31",
+    "components/AgentTags.tsx:33",
+    "components/create/AttachMenu.tsx:125"
+   ],
+   "cat": "color",
+   "key": "offwhite-80",
+   "status": "ok",
+   "info": "#ebeef1"
+  },
+  {
+   "count": 12,
+   "where": [
+    "builder/AssistantPanel.tsx:239",
+    "builder/chat/ActionList.tsx:12",
+    "builder/chat/QuestionCard.tsx:122",
+    "builder/tabs.tsx:12",
+    "builder/tabs.tsx:64",
+    "components/DemoControls.tsx:38",
+    "components/create/AttachMenu.tsx:45",
+    "components/create/AttachMenu.tsx:118",
+    "pages/AgentsPage.tsx:75",
+    "pages/BuilderPage.tsx:89",
+    "pages/CreateAgentPage.tsx:14",
+    "pages/templates/FigmaVersion.tsx:83"
+   ],
+   "cat": "color",
+   "key": "offwhite-40",
+   "status": "ok",
+   "info": "#f5f7f8"
+  },
+  {
+   "count": 10,
+   "where": [
+    "builder/AssistantPanel.tsx:39",
+    "builder/AssistantPanel.tsx:58",
+    "builder/Canvas.tsx:117",
+    "builder/Canvas.tsx:238",
+    "builder/chat/Composer.tsx:61",
+    "components/BotAvatar.tsx:6",
+    "components/IntroModal.tsx:39",
+    "components/templates/TemplateParts.tsx:14",
+    "pages/BuilderPage.tsx:139",
+    "pages/templates/FigmaVersion.tsx:39"
+   ],
+   "cat": "color",
+   "key": "black",
+   "status": "ok",
+   "info": "#253748"
+  },
+  {
+   "count": 10,
+   "where": [
+    "builder/AssistantPanel.tsx:43",
+    "builder/AssistantPanel.tsx:44",
+    "builder/AssistantPanel.tsx:46",
+    "builder/Canvas.tsx:62",
+    "builder/Canvas.tsx:121",
+    "builder/Canvas.tsx:122",
+    "builder/Canvas.tsx:124",
+    "builder/chat/Composer.tsx:65",
+    "components/AgentStarter.tsx:46",
+    "components/IntroModal.tsx:48"
+   ],
+   "cat": "color",
+   "key": "blue-90",
+   "status": "ok",
+   "info": "#004fff"
+  },
+  {
+   "count": 10,
+   "where": [
+    "builder/AssistantPanel.tsx:81",
+    "builder/Canvas.tsx:233",
+    "builder/Canvas.tsx:298",
+    "builder/chat/Composer.tsx:34",
+    "builder/chat/Composer.tsx:37",
+    "builder/chat/Composer.tsx:69",
+    "builder/chat/QuestionCard.tsx:99",
+    "components/AgentStarter.tsx:74",
+    "components/BotAvatar.tsx:5",
+    "pages/templates/FigmaVersion.tsx:56"
+   ],
+   "cat": "color",
+   "key": "offwhite-60",
+   "status": "ok",
+   "info": "#eff2f4"
+  },
+  {
+   "count": 9,
+   "where": [
+    "builder/AssistantPanel.tsx:45",
+    "builder/AssistantPanel.tsx:162",
+    "builder/Canvas.tsx:92",
+    "builder/Canvas.tsx:123",
+    "builder/chat/SparkleBadge.tsx:12",
+    "builder/tabs.tsx:33",
+    "components/AgentTags.tsx:7",
+    "components/templates/TemplateParts.tsx:7",
+    "components/templates/TemplateParts.tsx:43"
+   ],
+   "cat": "color",
+   "key": "purple-100",
+   "status": "ok",
+   "info": "#6c69f9"
+  },
+  {
+   "count": 7,
+   "where": [
+    "builder/AssistantPanel.tsx:41",
+    "builder/Canvas.tsx:119",
+    "components/AgentTags.tsx:6",
+    "components/AgentTags.tsx:15",
+    "components/templates/TemplateParts.tsx:10",
+    "components/templates/TemplateParts.tsx:12",
+    "components/templates/TemplateParts.tsx:13"
+   ],
+   "cat": "color",
+   "key": "green-100",
+   "status": "ok",
+   "info": "#088114"
+  },
+  {
+   "count": 6,
+   "where": [
+    "builder/AssistantPanel.tsx:139",
+    "builder/AssistantPanel.tsx:324",
+    "builder/chat/QuestionCard.tsx:122",
+    "components/AgentStarter.tsx:46",
+    "components/BotAvatar.tsx:7",
+    "components/create/PromptBox.tsx:151"
+   ],
+   "cat": "color",
+   "key": "blue-60",
+   "status": "ok",
+   "info": "#77a1ff"
+  },
+  {
+   "count": 6,
+   "where": [
+    "builder/Canvas.tsx:81",
+    "builder/Canvas.tsx:104",
+    "components/create/PromptBox.tsx:134",
+    "components/create/PromptBox.tsx:135",
+    "components/create/PromptBox.tsx:146",
+    "components/create/PromptBox.tsx:158"
+   ],
+   "cat": "color",
+   "key": "red-90",
+   "status": "ok",
+   "info": "#d92020"
+  },
+  {
+   "count": 4,
+   "where": [
+    "builder/AssistantPanel.tsx:139",
+    "builder/AssistantPanel.tsx:324",
+    "builder/chat/QuestionCard.tsx:122",
+    "components/AgentStarter.tsx:46"
+   ],
+   "cat": "color",
+   "key": "blue-20",
+   "status": "ok",
+   "info": "#f2f7ff"
+  },
+  {
+   "count": 4,
+   "where": [
+    "builder/AssistantPanel.tsx:287",
+    "builder/AssistantPanel.tsx:291",
+    "builder/Canvas.tsx:154",
+    "builder/Canvas.tsx:289"
+   ],
+   "cat": "color",
+   "key": "gray-40",
+   "status": "ok",
+   "info": "via CSS variable"
+  },
+  {
+   "count": 4,
+   "where": [
+    "builder/Canvas.tsx:62",
+    "builder/chat/Composer.tsx:37",
+    "components/BotAvatar.tsx:8",
+    "components/BotAvatar.tsx:9"
+   ],
+   "cat": "color",
+   "key": "blue-40",
+   "status": "ok",
+   "info": "via CSS variable"
+  },
+  {
+   "count": 4,
+   "where": [
+    "builder/Canvas.tsx:69",
+    "builder/Canvas.tsx:102",
+    "builder/Canvas.tsx:202",
+    "pages/AgentsPage.tsx:48"
+   ],
+   "cat": "color",
+   "key": "gray-60",
+   "status": "ok",
+   "info": "#909fac"
+  },
+  {
+   "count": 4,
+   "where": [
+    "builder/chat/Composer.tsx:54",
+    "builder/chat/QuestionCard.tsx:145",
+    "components/create/PromptBox.tsx:127"
+   ],
+   "cat": "color",
+   "key": "transparent",
+   "status": "ok",
+   "info": "transparent"
+  },
+  {
+   "count": 3,
+   "where": [
+    "builder/AssistantPanel.tsx:42",
+    "builder/Canvas.tsx:120",
+    "components/AgentTags.tsx:8"
+   ],
+   "cat": "color",
+   "key": "yellow-100",
+   "status": "ok",
+   "info": "#f4b24e"
+  },
+  {
+   "count": 3,
+   "where": [
+    "builder/Canvas.tsx:252",
+    "components/AgentStarter.tsx:63",
+    "components/AgentStarter.tsx:65"
+   ],
+   "cat": "color",
+   "key": "offwhite-100",
+   "status": "ok",
+   "info": "#e6eaed"
+  },
+  {
+   "count": 3,
+   "where": [
+    "builder/chat/Composer.tsx:65",
+    "components/AgentTags.tsx:5",
+    "components/templates/TemplateParts.tsx:9"
+   ],
+   "cat": "color",
+   "key": "blue-100",
+   "status": "ok",
+   "info": "#0047e5"
+  },
+  {
+   "count": 3,
+   "where": [
+    "builder/chat/SparkleBadge.tsx:12",
+    "components/AgentTags.tsx:10",
+    "components/templates/TemplateParts.tsx:8"
+   ],
+   "cat": "color",
+   "key": "navy-100",
+   "status": "ok",
+   "info": "#154f94"
+  },
+  {
+   "count": 3,
+   "where": [
+    "builder/tabs.tsx:33",
+    "components/AgentTags.tsx:7",
+    "components/templates/TemplateParts.tsx:7"
+   ],
+   "cat": "color",
+   "key": "purple-10",
+   "status": "ok",
+   "info": "#f2f1fe"
+  },
+  {
+   "count": 3,
+   "where": [
+    "components/AgentTags.tsx:5",
+    "components/create/PromptBox.tsx:117",
+    "components/templates/TemplateParts.tsx:9"
+   ],
+   "cat": "color",
+   "key": "blue-30",
+   "status": "ok",
+   "info": "#e1edff"
+  },
+  {
+   "count": 3,
+   "where": [
+    "components/AgentTags.tsx:6",
+    "components/AgentTags.tsx:15",
+    "components/templates/TemplateParts.tsx:10"
+   ],
+   "cat": "color",
+   "key": "green-20",
+   "status": "ok",
+   "info": "#d1edd4"
+  },
+  {
+   "count": 3,
+   "where": [
+    "components/AgentTags.tsx:9",
+    "components/create/PromptBox.tsx:146"
+   ],
+   "cat": "color",
+   "key": "red-10",
+   "status": "ok",
+   "info": "#fbe8e8"
+  },
+  {
+   "count": 3,
+   "where": [
+    "components/AgentTags.tsx:16",
+    "components/templates/TemplateParts.tsx:6",
+    "components/templates/TemplateParts.tsx:11"
+   ],
+   "cat": "color",
+   "key": "pitch-20",
+   "status": "ok",
+   "info": "#fce5e0"
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/chat/QuestionCard.tsx:84"
+   ],
+   "cat": "color",
+   "key": "primary",
+   "status": "ok",
+   "info": "#004fff"
+  },
+  {
+   "count": 2,
+   "where": [
+    "components/AgentTags.tsx:8",
+    "components/templates/TemplateParts.tsx:14"
+   ],
+   "cat": "color",
+   "key": "yellow-20",
+   "status": "ok",
+   "info": "#fdf0dc"
+  },
+  {
+   "count": 2,
+   "where": [
+    "components/AgentTags.tsx:10",
+    "components/templates/TemplateParts.tsx:8"
+   ],
+   "cat": "color",
+   "key": "navy-20",
+   "status": "ok",
+   "info": "#d1deed"
+  },
+  {
+   "count": 2,
+   "where": [
+    "components/templates/TemplateParts.tsx:6",
+    "components/templates/TemplateParts.tsx:11"
+   ],
+   "cat": "color",
+   "key": "red-100",
+   "status": "ok",
+   "info": "#b10606"
+  },
+  {
+   "count": 2,
+   "where": [
+    "components/templates/TemplateParts.tsx:12",
+    "components/templates/TemplateParts.tsx:13"
+   ],
+   "cat": "color",
+   "key": "green-10",
+   "status": "ok",
+   "info": "#e8f6e9"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/Canvas.tsx:64"
+   ],
+   "cat": "color",
+   "key": "green-40",
+   "status": "ok",
+   "info": "#a3daa8"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/Canvas.tsx:221"
+   ],
+   "cat": "color",
+   "key": "green-80",
+   "status": "ok",
+   "info": "via CSS variable"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/chat/SparkleBadge.tsx:12"
+   ],
+   "cat": "color",
+   "key": "purple-40",
+   "status": "ok",
+   "info": "via CSS variable"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/chat/SummaryCard.tsx:19"
+   ],
+   "cat": "color",
+   "key": "offwhite-20",
+   "status": "ok",
+   "info": "#fafbfb"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/tabs.tsx:26"
+   ],
+   "cat": "color",
+   "key": "gray-20",
+   "status": "ok",
+   "info": "#d3d8dd"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/AgentTags.tsx:9"
+   ],
+   "cat": "color",
+   "key": "red-80",
+   "status": "ok",
+   "info": "#e14d4d"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/AgentTags.tsx:16"
+   ],
+   "cat": "color",
+   "key": "pitch-100",
+   "status": "ok",
+   "info": "#ee7d64"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:44"
+   ],
+   "cat": "color",
+   "key": "yellow-80",
+   "status": "ok",
+   "info": "#f6c171"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/create/PromptBox.tsx:146"
+   ],
+   "cat": "color",
+   "key": "red-40",
+   "status": "ok",
+   "info": "#f0a6a6"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/AgentsPage.tsx:48"
+   ],
+   "cat": "color",
+   "key": "gray-80",
+   "status": "ok",
+   "info": "#6f8294"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/Canvas.tsx:232"
+   ],
+   "cat": "inline",
+   "key": "padding: 0px",
+   "status": "warn",
+   "info": "Inline style, not a class/token"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/tabs.tsx:85"
+   ],
+   "cat": "inline",
+   "key": "width: 170px",
+   "status": "warn",
+   "info": "Inline style, not a class/token"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/tabs.tsx:86"
+   ],
+   "cat": "inline",
+   "key": "width: 280px",
+   "status": "warn",
+   "info": "Inline style, not a class/token"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/AgentStarter.tsx:76"
+   ],
+   "cat": "inline",
+   "key": "fontSize: 40px",
+   "status": "warn",
+   "info": "Inline style, not a class/token"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/AgentTable.tsx:32"
+   ],
+   "cat": "inline",
+   "key": "width: 240px",
+   "status": "warn",
+   "info": "Inline style, not a class/token"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/AgentTable.tsx:36"
+   ],
+   "cat": "inline",
+   "key": "width: 190px",
+   "status": "warn",
+   "info": "Inline style, not a class/token"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/chat/SummaryCard.tsx:25"
+   ],
+   "cat": "other",
+   "key": "grid-cols-[76px_1fr]",
+   "status": "warn",
+   "info": "Arbitrary value 76px_1fr"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/AgentGrid.tsx:16"
+   ],
+   "cat": "other",
+   "key": "grid-cols-[repeat(auto-fill,minmax(300px,1fr))]",
+   "status": "warn",
+   "info": "Arbitrary value repeat(auto-fill,minmax(300px,1fr))"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/templates/FigmaVersion.tsx:84"
+   ],
+   "cat": "other",
+   "key": "grid-cols-[repeat(auto-fill,minmax(280px,1fr))]",
+   "status": "warn",
+   "info": "Arbitrary value repeat(auto-fill,minmax(280px,1fr))"
+  },
+  {
+   "count": 15,
+   "where": [
+    "builder/AssistantPanel.tsx:139",
+    "builder/AssistantPanel.tsx:324",
+    "builder/Canvas.tsx:73",
+    "builder/Canvas.tsx:74",
+    "builder/Canvas.tsx:233",
+    "builder/Canvas.tsx:238",
+    "builder/Canvas.tsx:241",
+    "builder/chat/Composer.tsx:7",
+    "builder/chat/SparkleBadge.tsx:8",
+    "components/AgentStarter.tsx:46",
+    "components/IntroModal.tsx:48",
+    "components/IntroModal.tsx:54",
+    "components/IntroModal.tsx:73",
+    "components/create/PromptBox.tsx:135",
+    "pages/BuilderPage.tsx:118"
+   ],
+   "cat": "radius",
+   "key": "rounded-full",
+   "status": "ok",
+   "info": "pill / none"
+  },
+  {
+   "count": 11,
+   "where": [
+    "builder/Canvas.tsx:89",
+    "builder/Canvas.tsx:132",
+    "builder/chat/QuestionCard.tsx:92",
+    "builder/chat/SummaryCard.tsx:18",
+    "builder/tabs.tsx:26",
+    "builder/tabs.tsx:32",
+    "components/AgentGrid.tsx:24",
+    "components/AgentStarter.tsx:74",
+    "components/create/PromptBox.tsx:117",
+    "pages/templates/shared.tsx:72",
+    "pages/templates/shared.tsx:96"
+   ],
+   "cat": "radius",
+   "key": "rounded-xl",
+   "status": "ok",
+   "info": "14px"
+  },
+  {
+   "count": 10,
+   "where": [
+    "builder/AssistantPanel.tsx:58",
+    "builder/AssistantPanel.tsx:74",
+    "builder/Canvas.tsx:92",
+    "builder/Canvas.tsx:250",
+    "builder/chat/ActionList.tsx:7",
+    "builder/chat/QuestionCard.tsx:135",
+    "builder/tabs.tsx:33",
+    "builder/tabs.tsx:78",
+    "components/AgentTable.tsx:25",
+    "components/IntroModal.tsx:39"
+   ],
+   "cat": "radius",
+   "key": "rounded-lg",
+   "status": "ok",
+   "info": "10px"
+  },
+  {
+   "count": 7,
+   "where": [
+    "builder/AssistantPanel.tsx:81",
+    "builder/tabs.tsx:64",
+    "components/create/AttachMenu.tsx:118",
+    "components/create/PromptBox.tsx:117",
+    "components/templates/TemplateParts.tsx:35",
+    "components/templates/TemplateParts.tsx:43",
+    "pages/BuilderPage.tsx:139"
+   ],
+   "cat": "radius",
+   "key": "rounded-md",
+   "status": "ok",
+   "info": "8px"
+  },
+  {
+   "count": 5,
+   "where": [
+    "components/AgentTags.tsx:19",
+    "components/DemoControls.tsx:38",
+    "components/create/AttachMenu.tsx:45",
+    "components/templates/TemplateParts.tsx:23",
+    "pages/BuilderPage.tsx:89"
+   ],
+   "cat": "radius",
+   "key": "rounded-sm",
+   "status": "ok",
+   "info": "6px"
+  },
+  {
+   "count": 3,
+   "where": [
+    "builder/AssistantPanel.tsx:162",
+    "components/create/AttachMenu.tsx:120",
+    "components/create/AttachMenu.tsx:125"
+   ],
+   "cat": "radius",
+   "key": "rounded-4",
+   "status": "ok",
+   "info": "4px \u2014 4px-grid radius token"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/chat/Composer.tsx:37"
+   ],
+   "cat": "radius",
+   "key": "rounded-20",
+   "status": "ok",
+   "info": "20px \u2014 4px-grid radius token"
+  },
+  {
+   "count": 9,
+   "where": [
+    "builder/Canvas.tsx:73",
+    "builder/Canvas.tsx:89",
+    "builder/Canvas.tsx:132",
+    "builder/Canvas.tsx:241",
+    "builder/Canvas.tsx:250",
+    "builder/chat/SparkleBadge.tsx:8",
+    "components/AgentGrid.tsx:24",
+    "components/AgentStarter.tsx:74",
+    "pages/templates/shared.tsx:72"
+   ],
+   "cat": "shadow",
+   "key": "shadow-sm",
+   "status": "ok",
+   "info": "design-system elevation"
+  },
+  {
+   "count": 5,
+   "where": [
+    "builder/Canvas.tsx:238",
+    "builder/chat/QuestionCard.tsx:92",
+    "components/DemoControls.tsx:22",
+    "components/create/PromptBox.tsx:117",
+    "pages/BuilderPage.tsx:139"
+   ],
+   "cat": "shadow",
+   "key": "shadow-md",
+   "status": "ok",
+   "info": "design-system elevation"
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/AssistantPanel.tsx:74",
+    "builder/chat/SummaryCard.tsx:18"
+   ],
+   "cat": "shadow",
+   "key": "shadow-xs",
+   "status": "ok",
+   "info": "design-system elevation"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:48"
+   ],
+   "cat": "shadow",
+   "key": "shadow-lg",
+   "status": "ok",
+   "info": "design-system elevation"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/create/PromptBox.tsx:127"
+   ],
+   "cat": "shadow",
+   "key": "shadow-none",
+   "status": "ok",
+   "info": "design-system elevation"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/templates/FigmaVersion.tsx:40"
+   ],
+   "cat": "shadow",
+   "key": "shadow-xl",
+   "status": "ok",
+   "info": "design-system elevation"
+  },
+  {
+   "count": 2,
+   "where": [
+    "components/create/AttachMenu.tsx:118",
+    "pages/BuilderPage.tsx:139"
+   ],
+   "cat": "size",
+   "key": "max-w-[220px]",
+   "status": "warn",
+   "info": "Arbitrary value 220px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "pages/AgentsPage.tsx:50",
+    "pages/templates/shared.tsx:61"
+   ],
+   "cat": "size",
+   "key": "w-[200px]",
+   "status": "warn",
+   "info": "Arbitrary value 200px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/AssistantPanel.tsx:58"
+   ],
+   "cat": "size",
+   "key": "max-w-[85%]",
+   "status": "warn",
+   "info": "Arbitrary value 85%"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/AssistantPanel.tsx:74"
+   ],
+   "cat": "size",
+   "key": "max-w-[90%]",
+   "status": "warn",
+   "info": "Arbitrary value 90%"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/Canvas.tsx:73"
+   ],
+   "cat": "size",
+   "key": "w-[210px]",
+   "status": "warn",
+   "info": "Arbitrary value 210px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/Canvas.tsx:89"
+   ],
+   "cat": "size",
+   "key": "w-[260px]",
+   "status": "warn",
+   "info": "Arbitrary value 260px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/Canvas.tsx:130"
+   ],
+   "cat": "size",
+   "key": "w-[92px]",
+   "status": "warn",
+   "info": "Arbitrary value 92px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/AgentStarter.tsx:26"
+   ],
+   "cat": "size",
+   "key": "max-w-[1200px]",
+   "status": "warn",
+   "info": "Arbitrary value 1200px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/AgentStarter.tsx:31"
+   ],
+   "cat": "size",
+   "key": "max-w-[720px]",
+   "status": "warn",
+   "info": "Arbitrary value 720px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:38"
+   ],
+   "cat": "size",
+   "key": "w-[700px]",
+   "status": "warn",
+   "info": "Arbitrary value 700px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:38"
+   ],
+   "cat": "size",
+   "key": "max-w-[calc(100vw-32px)]",
+   "status": "warn",
+   "info": "Arbitrary value calc(100vw-32px)"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:38"
+   ],
+   "cat": "size",
+   "key": "max-w-[700px]",
+   "status": "warn",
+   "info": "Arbitrary value 700px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:62"
+   ],
+   "cat": "size",
+   "key": "max-w-[560px]",
+   "status": "warn",
+   "info": "Arbitrary value 560px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/create/PromptBox.tsx:127"
+   ],
+   "cat": "size",
+   "key": "min-h-[104px]",
+   "status": "warn",
+   "info": "Arbitrary value 104px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/BuilderPage.tsx:78"
+   ],
+   "cat": "size",
+   "key": "max-w-[260px]",
+   "status": "warn",
+   "info": "Arbitrary value 260px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/templates/FigmaVersion.tsx:14"
+   ],
+   "cat": "size",
+   "key": "min-w-[120px]",
+   "status": "warn",
+   "info": "Arbitrary value 120px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/templates/FigmaVersion.tsx:40"
+   ],
+   "cat": "size",
+   "key": "w-[560px]",
+   "status": "warn",
+   "info": "Arbitrary value 560px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/templates/FigmaVersion.tsx:56"
+   ],
+   "cat": "size",
+   "key": "h-[250px]",
+   "status": "warn",
+   "info": "Arbitrary value 250px"
+  },
+  {
+   "count": 11,
+   "where": [
+    "builder/AssistantPanel.tsx:121",
+    "builder/Canvas.tsx:69",
+    "builder/Canvas.tsx:77",
+    "builder/Canvas.tsx:95",
+    "builder/chat/QuestionCard.tsx:126",
+    "builder/chat/QuestionCard.tsx:145",
+    "builder/chat/SummaryCard.tsx:20",
+    "layout/AppShell.tsx:53",
+    "pages/BuilderPage.tsx:67",
+    "pages/BuilderPage.tsx:69",
+    "pages/BuilderPage.tsx:164"
+   ],
+   "cat": "size",
+   "key": "min-w-0",
+   "status": "info",
+   "info": "0px"
+  },
+  {
+   "count": 5,
+   "where": [
+    "builder/Canvas.tsx:69",
+    "builder/Canvas.tsx:82",
+    "builder/Canvas.tsx:90",
+    "builder/Canvas.tsx:102",
+    "components/create/PromptBox.tsx:135"
+   ],
+   "cat": "size",
+   "key": "size-2",
+   "status": "info",
+   "info": "8px"
+  },
+  {
+   "count": 4,
+   "where": [
+    "builder/Canvas.tsx:74",
+    "builder/Canvas.tsx:92",
+    "builder/chat/Composer.tsx:7",
+    "builder/tabs.tsx:33"
+   ],
+   "cat": "size",
+   "key": "size-9",
+   "status": "info",
+   "info": "36px"
+  },
+  {
+   "count": 3,
+   "where": [
+    "components/create/PromptBox.tsx:170",
+    "pages/AgentsPage.tsx:51",
+    "pages/templates/shared.tsx:62"
+   ],
+   "cat": "size",
+   "key": "size-4",
+   "status": "info",
+   "info": "16px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/AssistantPanel.tsx:81",
+    "builder/chat/Composer.tsx:56"
+   ],
+   "cat": "size",
+   "key": "size-7",
+   "status": "info",
+   "info": "28px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/AssistantPanel.tsx:162",
+    "components/create/AttachMenu.tsx:120"
+   ],
+   "cat": "size",
+   "key": "size-5",
+   "status": "info",
+   "info": "20px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/Canvas.tsx:252",
+    "components/AgentTags.tsx:19"
+   ],
+   "cat": "size",
+   "key": "h-5",
+   "status": "info",
+   "info": "20px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "pages/AgentsPage.tsx:57",
+    "pages/BuilderPage.tsx:78"
+   ],
+   "cat": "size",
+   "key": "h-7",
+   "status": "info",
+   "info": "28px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/AssistantPanel.tsx:240"
+   ],
+   "cat": "size",
+   "key": "h-12",
+   "status": "info",
+   "info": "48px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/Canvas.tsx:132"
+   ],
+   "cat": "size",
+   "key": "size-14",
+   "status": "info",
+   "info": "56px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/Canvas.tsx:154"
+   ],
+   "cat": "size",
+   "key": "size-6",
+   "status": "info",
+   "info": "24px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/Canvas.tsx:233"
+   ],
+   "cat": "size",
+   "key": "size-8",
+   "status": "info",
+   "info": "32px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/Canvas.tsx:238"
+   ],
+   "cat": "size",
+   "key": "size-11",
+   "status": "info",
+   "info": "44px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/chat/Composer.tsx:37"
+   ],
+   "cat": "size",
+   "key": "min-h-9",
+   "status": "info",
+   "info": "36px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/DemoControls.tsx:27"
+   ],
+   "cat": "size",
+   "key": "w-56",
+   "status": "info",
+   "info": "224px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:48"
+   ],
+   "cat": "size",
+   "key": "size-20",
+   "status": "info",
+   "info": "80px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:54"
+   ],
+   "cat": "size",
+   "key": "size-24",
+   "status": "info",
+   "info": "96px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:73"
+   ],
+   "cat": "size",
+   "key": "h-1.5",
+   "status": "info",
+   "info": "6px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/create/AttachMenu.tsx:57"
+   ],
+   "cat": "size",
+   "key": "w-64",
+   "status": "info",
+   "info": "256px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/BuilderPage.tsx:68"
+   ],
+   "cat": "size",
+   "key": "h-14",
+   "status": "info",
+   "info": "56px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/BuilderPage.tsx:163"
+   ],
+   "cat": "size",
+   "key": "min-h-0",
+   "status": "info",
+   "info": "0px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/templates/FigmaVersion.tsx:14"
+   ],
+   "cat": "size",
+   "key": "h-8",
+   "status": "info",
+   "info": "32px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/Canvas.tsx:103"
+   ],
+   "cat": "space",
+   "key": "left-[28%]",
+   "status": "warn",
+   "info": "Arbitrary value 28%"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/Canvas.tsx:106"
+   ],
+   "cat": "space",
+   "key": "left-[72%]",
+   "status": "warn",
+   "info": "Arbitrary value 72%"
+  },
+  {
+   "count": 23,
+   "where": [
+    "builder/AssistantPanel.tsx:134",
+    "builder/AssistantPanel.tsx:161",
+    "builder/AssistantPanel.tsx:290",
+    "builder/AssistantPanel.tsx:319",
+    "builder/chat/Composer.tsx:33",
+    "builder/chat/QuestionCard.tsx:152",
+    "builder/chat/QuestionCard.tsx:154",
+    "builder/chat/SummaryCard.tsx:25",
+    "builder/chat/SummaryCard.tsx:31",
+    "components/AgentStarter.tsx:40",
+    "components/AgentStarter.tsx:46",
+    "components/AgentTable.tsx:54",
+    "components/create/AttachMenu.tsx:68",
+    "components/create/AttachMenu.tsx:114",
+    "components/create/PromptBox.tsx:169",
+    "pages/AgentsPage.tsx:42",
+    "pages/AgentsPage.tsx:63",
+    "pages/BuilderPage.tsx:108",
+    "pages/BuilderPage.tsx:109",
+    "pages/templates/FigmaVersion.tsx:58",
+    "pages/templates/FigmaVersion.tsx:76",
+    "pages/templates/shared.tsx:45",
+    "pages/templates/shared.tsx:72"
+   ],
+   "cat": "space",
+   "key": "gap-2",
+   "status": "ok",
+   "info": "8px"
+  },
+  {
+   "count": 13,
+   "where": [
+    "builder/AssistantPanel.tsx:56",
+    "builder/AssistantPanel.tsx:119",
+    "builder/AssistantPanel.tsx:174",
+    "builder/AssistantPanel.tsx:240",
+    "builder/Canvas.tsx:241",
+    "builder/Canvas.tsx:250",
+    "builder/chat/Composer.tsx:37",
+    "builder/chat/Composer.tsx:74",
+    "builder/chat/QuestionCard.tsx:93",
+    "components/AgentTable.tsx:39",
+    "components/AgentTags.tsx:44",
+    "components/create/PromptBox.tsx:132",
+    "pages/BuilderPage.tsx:69"
+   ],
+   "cat": "space",
+   "key": "gap-1",
+   "status": "ok",
+   "info": "4px"
+  },
+  {
+   "count": 11,
+   "where": [
+    "builder/AssistantPanel.tsx:58",
+    "builder/AssistantPanel.tsx:74",
+    "builder/AssistantPanel.tsx:139",
+    "builder/AssistantPanel.tsx:319",
+    "builder/AssistantPanel.tsx:324",
+    "builder/chat/ActionList.tsx:12",
+    "builder/chat/Composer.tsx:32",
+    "builder/chat/QuestionCard.tsx:93",
+    "builder/tabs.tsx:64",
+    "components/create/AttachMenu.tsx:114",
+    "components/create/PromptBox.tsx:130"
+   ],
+   "cat": "space",
+   "key": "px-3",
+   "status": "ok",
+   "info": "12px"
+  },
+  {
+   "count": 10,
+   "where": [
+    "builder/AssistantPanel.tsx:267",
+    "builder/chat/QuestionCard.tsx:111",
+    "builder/chat/QuestionCard.tsx:152",
+    "builder/chat/SummaryCard.tsx:19",
+    "builder/chat/SummaryCard.tsx:23",
+    "builder/chat/SummaryCard.tsx:31",
+    "components/create/PromptBox.tsx:127",
+    "pages/AgentsPage.tsx:29",
+    "pages/AgentsPage.tsx:42",
+    "pages/templates/FigmaVersion.tsx:74"
+   ],
+   "cat": "space",
+   "key": "px-4",
+   "status": "ok",
+   "info": "16px"
+  },
+  {
+   "count": 9,
+   "where": [
+    "builder/AssistantPanel.tsx:271",
+    "builder/Canvas.tsx:103",
+    "builder/Canvas.tsx:106",
+    "builder/Canvas.tsx:136",
+    "components/AgentStarter.tsx:29",
+    "pages/AgentsPage.tsx:81",
+    "pages/templates/FigmaVersion.tsx:51",
+    "pages/templates/shared.tsx:75",
+    "pages/templates/shared.tsx:88"
+   ],
+   "cat": "space",
+   "key": "mt-1",
+   "status": "ok",
+   "info": "4px"
+  },
+  {
+   "count": 8,
+   "where": [
+    "builder/AssistantPanel.tsx:58",
+    "builder/AssistantPanel.tsx:74",
+    "builder/chat/ActionList.tsx:12",
+    "builder/chat/QuestionCard.tsx:93",
+    "builder/chat/QuestionCard.tsx:135",
+    "builder/tabs.tsx:64",
+    "components/create/AttachMenu.tsx:45",
+    "pages/AgentsPage.tsx:42"
+   ],
+   "cat": "space",
+   "key": "py-2",
+   "status": "ok",
+   "info": "8px"
+  },
+  {
+   "count": 7,
+   "where": [
+    "builder/AssistantPanel.tsx:319",
+    "builder/chat/Composer.tsx:32",
+    "builder/chat/QuestionCard.tsx:111",
+    "components/IntroModal.tsx:60",
+    "components/create/AttachMenu.tsx:114",
+    "pages/AgentsPage.tsx:29",
+    "pages/templates/FigmaVersion.tsx:41"
+   ],
+   "cat": "space",
+   "key": "pb-2",
+   "status": "ok",
+   "info": "8px"
+  },
+  {
+   "count": 7,
+   "where": [
+    "builder/Canvas.tsx:237",
+    "builder/chat/QuestionCard.tsx:135",
+    "builder/tabs.tsx:32",
+    "components/AgentGrid.tsx:24",
+    "components/AgentStarter.tsx:74",
+    "pages/BuilderPage.tsx:68",
+    "pages/templates/FigmaVersion.tsx:41"
+   ],
+   "cat": "space",
+   "key": "gap-3",
+   "status": "ok",
+   "info": "12px"
+  },
+  {
+   "count": 6,
+   "where": [
+    "builder/AssistantPanel.tsx:324",
+    "builder/Canvas.tsx:73",
+    "components/AgentStarter.tsx:46",
+    "components/DemoControls.tsx:28",
+    "components/DemoControls.tsx:38",
+    "pages/BuilderPage.tsx:139"
+   ],
+   "cat": "space",
+   "key": "py-1.5",
+   "status": "token",
+   "info": "6px \u2014 prototype spacing token (--spacing-1.5)"
+  },
+  {
+   "count": 6,
+   "where": [
+    "builder/Canvas.tsx:73",
+    "builder/Canvas.tsx:91",
+    "builder/chat/ActionList.tsx:12",
+    "builder/chat/SummaryCard.tsx:19",
+    "builder/chat/Thinking.tsx:11",
+    "components/create/AttachMenu.tsx:45"
+   ],
+   "cat": "space",
+   "key": "gap-2.5",
+   "status": "token",
+   "info": "10px \u2014 prototype spacing token (--spacing-2.5)"
+  },
+  {
+   "count": 5,
+   "where": [
+    "builder/Canvas.tsx:130",
+    "components/IntroModal.tsx:71",
+    "components/create/AttachMenu.tsx:118",
+    "components/create/PromptBox.tsx:134",
+    "components/templates/TemplateParts.tsx:19"
+   ],
+   "cat": "space",
+   "key": "gap-1.5",
+   "status": "token",
+   "info": "6px \u2014 prototype spacing token (--spacing-1.5)"
+  },
+  {
+   "count": 5,
+   "where": [
+    "builder/chat/Composer.tsx:74",
+    "components/AgentStarter.tsx:40",
+    "components/IntroModal.tsx:62",
+    "components/create/PromptBox.tsx:158",
+    "pages/BuilderPage.tsx:139"
+   ],
+   "cat": "space",
+   "key": "mt-2",
+   "status": "ok",
+   "info": "8px"
+  },
+  {
+   "count": 5,
+   "where": [
+    "builder/tabs.tsx:32",
+    "components/AgentGrid.tsx:16",
+    "components/AgentTable.tsx:24",
+    "pages/templates/FigmaVersion.tsx:83",
+    "pages/templates/shared.tsx:72"
+   ],
+   "cat": "space",
+   "key": "p-4",
+   "status": "ok",
+   "info": "16px"
+  },
+  {
+   "count": 4,
+   "where": [
+    "builder/Canvas.tsx:241",
+    "builder/Canvas.tsx:250",
+    "components/DemoControls.tsx:27",
+    "components/create/AttachMenu.tsx:57"
+   ],
+   "cat": "space",
+   "key": "p-1",
+   "status": "ok",
+   "info": "4px"
+  },
+  {
+   "count": 4,
+   "where": [
+    "builder/chat/QuestionCard.tsx:106",
+    "builder/chat/QuestionCard.tsx:154",
+    "components/AgentStarter.tsx:52",
+    "pages/AgentsPage.tsx:63"
+   ],
+   "cat": "space",
+   "key": "ml-auto",
+   "status": "ok",
+   "info": "auto"
+  },
+  {
+   "count": 4,
+   "where": [
+    "builder/chat/SummaryCard.tsx:19",
+    "builder/chat/SummaryCard.tsx:23",
+    "builder/chat/SummaryCard.tsx:31",
+    "pages/templates/FigmaVersion.tsx:74"
+   ],
+   "cat": "space",
+   "key": "py-3",
+   "status": "ok",
+   "info": "12px"
+  },
+  {
+   "count": 4,
+   "where": [
+    "builder/tabs.tsx:13",
+    "builder/tabs.tsx:26",
+    "components/AgentStarter.tsx:26",
+    "components/IntroModal.tsx:60"
+   ],
+   "cat": "space",
+   "key": "px-6",
+   "status": "ok",
+   "info": "24px"
+  },
+  {
+   "count": 4,
+   "where": [
+    "components/DemoControls.tsx:28",
+    "components/DemoControls.tsx:38",
+    "components/create/AttachMenu.tsx:45",
+    "components/templates/TemplateParts.tsx:23"
+   ],
+   "cat": "space",
+   "key": "px-2",
+   "status": "ok",
+   "info": "8px"
+  },
+  {
+   "count": 3,
+   "where": [
+    "builder/AssistantPanel.tsx:139",
+    "builder/chat/Composer.tsx:37",
+    "components/create/AttachMenu.tsx:118"
+   ],
+   "cat": "space",
+   "key": "py-1",
+   "status": "ok",
+   "info": "4px"
+  },
+  {
+   "count": 3,
+   "where": [
+    "builder/Canvas.tsx:103",
+    "builder/Canvas.tsx:106",
+    "pages/BuilderPage.tsx:139"
+   ],
+   "cat": "space",
+   "key": "top-full",
+   "status": "ok",
+   "info": "full"
+  },
+  {
+   "count": 3,
+   "where": [
+    "builder/chat/Composer.tsx:32",
+    "builder/chat/QuestionCard.tsx:111",
+    "pages/AgentsPage.tsx:29"
+   ],
+   "cat": "space",
+   "key": "pt-3",
+   "status": "ok",
+   "info": "12px"
+  },
+  {
+   "count": 3,
+   "where": [
+    "builder/chat/Markdown.tsx:28",
+    "builder/chat/QuestionCard.tsx:114",
+    "components/AgentGrid.tsx:38"
+   ],
+   "cat": "space",
+   "key": "space-y-1",
+   "status": "ok",
+   "info": "4px"
+  },
+  {
+   "count": 3,
+   "where": [
+    "builder/chat/QuestionCard.tsx:152",
+    "components/IntroModal.tsx:67",
+    "components/create/PromptBox.tsx:130"
+   ],
+   "cat": "space",
+   "key": "pb-3",
+   "status": "ok",
+   "info": "12px"
+  },
+  {
+   "count": 3,
+   "where": [
+    "builder/chat/SummaryCard.tsx:23",
+    "components/create/AttachMenu.tsx:60",
+    "pages/templates/FigmaVersion.tsx:51"
+   ],
+   "cat": "space",
+   "key": "space-y-2",
+   "status": "ok",
+   "info": "8px"
+  },
+  {
+   "count": 3,
+   "where": [
+    "builder/tabs.tsx:13",
+    "components/AgentStarter.tsx:26",
+    "components/IntroModal.tsx:62"
+   ],
+   "cat": "space",
+   "key": "mx-auto",
+   "status": "ok",
+   "info": "auto"
+  },
+  {
+   "count": 3,
+   "where": [
+    "builder/tabs.tsx:146",
+    "components/AgentStarter.tsx:62",
+    "pages/templates/FigmaVersion.tsx:84"
+   ],
+   "cat": "space",
+   "key": "gap-4",
+   "status": "ok",
+   "info": "16px"
+  },
+  {
+   "count": 3,
+   "where": [
+    "components/AgentTags.tsx:19",
+    "components/templates/TemplateParts.tsx:23",
+    "pages/BuilderPage.tsx:89"
+   ],
+   "cat": "space",
+   "key": "px-1.5",
+   "status": "token",
+   "info": "6px \u2014 prototype spacing token (--spacing-1.5)"
+  },
+  {
+   "count": 3,
+   "where": [
+    "pages/templates/FigmaVersion.tsx:41",
+    "pages/templates/FigmaVersion.tsx:48",
+    "pages/templates/FigmaVersion.tsx:58"
+   ],
+   "cat": "space",
+   "key": "px-8",
+   "status": "ok",
+   "info": "32px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/AssistantPanel.tsx:269",
+    "components/AgentStarter.tsx:26"
+   ],
+   "cat": "space",
+   "key": "py-8",
+   "status": "ok",
+   "info": "32px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/Canvas.tsx:73",
+    "pages/BuilderPage.tsx:68"
+   ],
+   "cat": "space",
+   "key": "pr-4",
+   "status": "ok",
+   "info": "16px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/Canvas.tsx:73",
+    "components/create/AttachMenu.tsx:118"
+   ],
+   "cat": "space",
+   "key": "pl-1.5",
+   "status": "token",
+   "info": "6px \u2014 prototype spacing token (--spacing-1.5)"
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/Canvas.tsx:91",
+    "components/IntroModal.tsx:38"
+   ],
+   "cat": "space",
+   "key": "p-2.5",
+   "status": "token",
+   "info": "10px \u2014 prototype spacing token (--spacing-2.5)"
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/Canvas.tsx:103",
+    "builder/Canvas.tsx:106"
+   ],
+   "cat": "space",
+   "key": "translate-x-1",
+   "status": "ok",
+   "info": "4px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/chat/Composer.tsx:54",
+    "pages/BuilderPage.tsx:89"
+   ],
+   "cat": "space",
+   "key": "py-0.5",
+   "status": "token",
+   "info": "2px \u2014 prototype spacing token (--spacing-0.5)"
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/chat/QuestionCard.tsx:135",
+    "pages/BuilderPage.tsx:139"
+   ],
+   "cat": "space",
+   "key": "px-2.5",
+   "status": "token",
+   "info": "10px \u2014 prototype spacing token (--spacing-2.5)"
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/chat/QuestionCard.tsx:152",
+    "pages/templates/shared.tsx:77"
+   ],
+   "cat": "space",
+   "key": "pt-1",
+   "status": "ok",
+   "info": "4px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/tabs.tsx:13",
+    "pages/templates/FigmaVersion.tsx:48"
+   ],
+   "cat": "space",
+   "key": "space-y-4",
+   "status": "ok",
+   "info": "16px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/tabs.tsx:26",
+    "components/create/PromptBox.tsx:169"
+   ],
+   "cat": "space",
+   "key": "py-10",
+   "status": "token",
+   "info": "40px \u2014 prototype spacing token (--spacing-10)"
+  },
+  {
+   "count": 2,
+   "where": [
+    "components/AgentGrid.tsx:16",
+    "components/AgentStarter.tsx:68"
+   ],
+   "cat": "space",
+   "key": "gap-5",
+   "status": "token",
+   "info": "20px \u2014 prototype spacing token (--spacing-5)"
+  },
+  {
+   "count": 2,
+   "where": [
+    "components/AgentGrid.tsx:24",
+    "components/AgentStarter.tsx:74"
+   ],
+   "cat": "space",
+   "key": "p-5",
+   "status": "token",
+   "info": "20px \u2014 prototype spacing token (--spacing-5)"
+  },
+  {
+   "count": 2,
+   "where": [
+    "components/AgentStarter.tsx:31",
+    "components/AgentStarter.tsx:86"
+   ],
+   "cat": "space",
+   "key": "mt-6",
+   "status": "ok",
+   "info": "24px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "components/create/AttachMenu.tsx:60",
+    "layout/AppShell.tsx:39"
+   ],
+   "cat": "space",
+   "key": "p-2",
+   "status": "ok",
+   "info": "8px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "components/create/AttachMenu.tsx:125",
+    "pages/BuilderPage.tsx:118"
+   ],
+   "cat": "space",
+   "key": "p-0.5",
+   "status": "token",
+   "info": "2px \u2014 prototype spacing token (--spacing-0.5)"
+  },
+  {
+   "count": 2,
+   "where": [
+    "pages/AgentsPage.tsx:51",
+    "pages/templates/shared.tsx:62"
+   ],
+   "cat": "space",
+   "key": "top-1",
+   "status": "ok",
+   "info": "4px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "pages/AgentsPage.tsx:51",
+    "pages/templates/shared.tsx:62"
+   ],
+   "cat": "space",
+   "key": "left-2.5",
+   "status": "token",
+   "info": "10px \u2014 prototype spacing token (--spacing-2.5)"
+  },
+  {
+   "count": 2,
+   "where": [
+    "pages/AgentsPage.tsx:51",
+    "pages/templates/shared.tsx:62"
+   ],
+   "cat": "space",
+   "key": "translate-y-1",
+   "status": "ok",
+   "info": "4px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "pages/AgentsPage.tsx:57",
+    "pages/templates/shared.tsx:63"
+   ],
+   "cat": "space",
+   "key": "pl-8",
+   "status": "ok",
+   "info": "32px"
+  },
+  {
+   "count": 2,
+   "where": [
+    "pages/AgentsPage.tsx:79",
+    "pages/templates/shared.tsx:86"
+   ],
+   "cat": "space",
+   "key": "py-16",
+   "status": "token",
+   "info": "64px \u2014 prototype spacing token (--spacing-16)"
+  },
+  {
+   "count": 2,
+   "where": [
+    "pages/BuilderPage.tsx:139",
+    "pages/templates/FigmaVersion.tsx:40"
+   ],
+   "cat": "space",
+   "key": "right-0",
+   "status": "ok",
+   "info": "0px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/AssistantPanel.tsx:83"
+   ],
+   "cat": "space",
+   "key": "gap-0.5",
+   "status": "token",
+   "info": "2px \u2014 prototype spacing token (--spacing-0.5)"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/AssistantPanel.tsx:101"
+   ],
+   "cat": "space",
+   "key": "ml-1",
+   "status": "ok",
+   "info": "4px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/AssistantPanel.tsx:121"
+   ],
+   "cat": "space",
+   "key": "space-y-2.5",
+   "status": "token",
+   "info": "10px \u2014 prototype spacing token (--spacing-2.5)"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/AssistantPanel.tsx:240"
+   ],
+   "cat": "space",
+   "key": "pr-2",
+   "status": "ok",
+   "info": "8px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/AssistantPanel.tsx:240"
+   ],
+   "cat": "space",
+   "key": "pl-4",
+   "status": "ok",
+   "info": "16px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/AssistantPanel.tsx:256"
+   ],
+   "cat": "space",
+   "key": "ml-1.5",
+   "status": "token",
+   "info": "6px \u2014 prototype spacing token (--spacing-1.5)"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/AssistantPanel.tsx:267"
+   ],
+   "cat": "space",
+   "key": "space-y-5",
+   "status": "token",
+   "info": "20px \u2014 prototype spacing token (--spacing-5)"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/AssistantPanel.tsx:267"
+   ],
+   "cat": "space",
+   "key": "py-5",
+   "status": "token",
+   "info": "20px \u2014 prototype spacing token (--spacing-5)"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/AssistantPanel.tsx:287"
+   ],
+   "cat": "space",
+   "key": "mb-1",
+   "status": "ok",
+   "info": "4px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/chat/Composer.tsx:37"
+   ],
+   "cat": "space",
+   "key": "pr-1.5",
+   "status": "token",
+   "info": "6px \u2014 prototype spacing token (--spacing-1.5)"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/chat/Composer.tsx:37"
+   ],
+   "cat": "space",
+   "key": "pl-3.5",
+   "status": "token",
+   "info": "14px \u2014 prototype spacing token (--spacing-3.5)"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/chat/Markdown.tsx:28"
+   ],
+   "cat": "space",
+   "key": "pl-5",
+   "status": "token",
+   "info": "20px \u2014 prototype spacing token (--spacing-5)"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/chat/QuestionCard.tsx:92"
+   ],
+   "cat": "space",
+   "key": "mx-3",
+   "status": "ok",
+   "info": "12px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/chat/QuestionCard.tsx:92"
+   ],
+   "cat": "space",
+   "key": "mb-3",
+   "status": "ok",
+   "info": "12px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/chat/QuestionCard.tsx:114"
+   ],
+   "cat": "space",
+   "key": "mt-2.5",
+   "status": "token",
+   "info": "10px \u2014 prototype spacing token (--spacing-2.5)"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/chat/SummaryCard.tsx:26"
+   ],
+   "cat": "space",
+   "key": "pt-px",
+   "status": "ok",
+   "info": "px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "builder/tabs.tsx:13"
+   ],
+   "cat": "space",
+   "key": "py-6",
+   "status": "ok",
+   "info": "24px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/AgentStarter.tsx:28"
+   ],
+   "cat": "space",
+   "key": "mt-4",
+   "status": "ok",
+   "info": "16px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/AgentStarter.tsx:37"
+   ],
+   "cat": "space",
+   "key": "mt-5",
+   "status": "token",
+   "info": "20px \u2014 prototype spacing token (--spacing-5)"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/AgentStarter.tsx:46"
+   ],
+   "cat": "space",
+   "key": "pr-3",
+   "status": "ok",
+   "info": "12px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/AgentStarter.tsx:46"
+   ],
+   "cat": "space",
+   "key": "pl-2.5",
+   "status": "token",
+   "info": "10px \u2014 prototype spacing token (--spacing-2.5)"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/AgentStarter.tsx:62"
+   ],
+   "cat": "space",
+   "key": "mt-10",
+   "status": "token",
+   "info": "40px \u2014 prototype spacing token (--spacing-10)"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/AgentStarter.tsx:62"
+   ],
+   "cat": "space",
+   "key": "mb-6",
+   "status": "ok",
+   "info": "24px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:38"
+   ],
+   "cat": "space",
+   "key": "gap-0",
+   "status": "ok",
+   "info": "0px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:42"
+   ],
+   "cat": "space",
+   "key": "top-8",
+   "status": "ok",
+   "info": "32px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:42"
+   ],
+   "cat": "space",
+   "key": "right-8",
+   "status": "ok",
+   "info": "32px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:60"
+   ],
+   "cat": "space",
+   "key": "pt-6",
+   "status": "ok",
+   "info": "24px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:67"
+   ],
+   "cat": "space",
+   "key": "px-5",
+   "status": "token",
+   "info": "20px \u2014 prototype spacing token (--spacing-5)"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:67"
+   ],
+   "cat": "space",
+   "key": "pt-4",
+   "status": "ok",
+   "info": "16px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/create/AttachMenu.tsx:118"
+   ],
+   "cat": "space",
+   "key": "pr-1",
+   "status": "ok",
+   "info": "4px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/create/PromptBox.tsx:134"
+   ],
+   "cat": "space",
+   "key": "mr-1",
+   "status": "ok",
+   "info": "4px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/BuilderPage.tsx:68"
+   ],
+   "cat": "space",
+   "key": "pl-2",
+   "status": "ok",
+   "info": "8px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/templates/FigmaVersion.tsx:39"
+   ],
+   "cat": "space",
+   "key": "inset-0",
+   "status": "ok",
+   "info": "0px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/templates/FigmaVersion.tsx:40"
+   ],
+   "cat": "space",
+   "key": "top-0",
+   "status": "ok",
+   "info": "0px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/templates/FigmaVersion.tsx:41"
+   ],
+   "cat": "space",
+   "key": "pt-8",
+   "status": "ok",
+   "info": "32px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/templates/FigmaVersion.tsx:48"
+   ],
+   "cat": "space",
+   "key": "pb-8",
+   "status": "ok",
+   "info": "32px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/templates/FigmaVersion.tsx:58"
+   ],
+   "cat": "space",
+   "key": "py-4",
+   "status": "ok",
+   "info": "16px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/templates/FigmaVersion.tsx:74"
+   ],
+   "cat": "space",
+   "key": "space-y-3",
+   "status": "ok",
+   "info": "12px"
+  },
+  {
+   "count": 1,
+   "where": [
+    "pages/templates/shared.tsx:77"
+   ],
+   "cat": "space",
+   "key": "mt-auto",
+   "status": "ok",
+   "info": "auto"
+  },
+  {
+   "count": 27,
+   "where": [
+    "builder/AssistantPanel.tsx:58",
+    "builder/AssistantPanel.tsx:74",
+    "builder/AssistantPanel.tsx:121",
+    "builder/AssistantPanel.tsx:139",
+    "builder/AssistantPanel.tsx:271",
+    "builder/AssistantPanel.tsx:291",
+    "builder/AssistantPanel.tsx:292",
+    "builder/AssistantPanel.tsx:324",
+    "builder/chat/ActionList.tsx:20",
+    "builder/chat/Composer.tsx:54",
+    "builder/chat/QuestionCard.tsx:145",
+    "builder/chat/SummaryCard.tsx:27",
+    "builder/tabs.tsx:16",
+    "builder/tabs.tsx:26",
+    "builder/tabs.tsx:36",
+    "builder/tabs.tsx:64",
+    "components/AgentGrid.tsx:38",
+    "components/AgentStarter.tsx:29",
+    "components/AgentStarter.tsx:46",
+    "components/AgentStarter.tsx:62",
+    "components/AgentStarter.tsx:81",
+    "components/DemoControls.tsx:38",
+    "components/create/AttachMenu.tsx:45",
+    "pages/AgentsPage.tsx:81",
+    "pages/templates/FigmaVersion.tsx:51",
+    "pages/templates/shared.tsx:76",
+    "pages/templates/shared.tsx:88"
+   ],
+   "cat": "type",
+   "key": "paragraph-400-l",
+   "status": "ok",
+   "info": "400 13px/20px \u2014 Table cell, descriptions."
+  },
+  {
+   "count": 13,
+   "where": [
+    "builder/AssistantPanel.tsx:161",
+    "builder/AssistantPanel.tsx:168",
+    "builder/Canvas.tsx:135",
+    "builder/chat/QuestionCard.tsx:106",
+    "builder/chat/QuestionCard.tsx:113",
+    "builder/chat/QuestionCard.tsx:128",
+    "components/create/AttachMenu.tsx:83",
+    "components/create/AttachMenu.tsx:90",
+    "components/create/AttachMenu.tsx:97",
+    "components/create/PromptBox.tsx:158",
+    "pages/AgentsPage.tsx:33",
+    "pages/BuilderPage.tsx:139",
+    "pages/templates/shared.tsx:43"
+   ],
+   "cat": "type",
+   "key": "paragraph-400-m",
+   "status": "ok",
+   "info": "400 12px/18px \u2014 Helper text, captions; error text with `text-destructive`."
+  },
+  {
+   "count": 11,
+   "where": [
+    "builder/AssistantPanel.tsx:57",
+    "builder/AssistantPanel.tsx:66",
+    "builder/AssistantPanel.tsx:101",
+    "builder/Canvas.tsx:79",
+    "builder/Canvas.tsx:97",
+    "builder/Canvas.tsx:103",
+    "builder/Canvas.tsx:106",
+    "builder/Canvas.tsx:136",
+    "builder/Canvas.tsx:244",
+    "builder/chat/Composer.tsx:74",
+    "builder/chat/QuestionCard.tsx:153"
+   ],
+   "cat": "type",
+   "key": "paragraph-400-s",
+   "status": "ok",
+   "info": "400 10px/16px \u2014 Tiny captions, legal."
+  },
+  {
+   "count": 9,
+   "where": [
+    "builder/Canvas.tsx:78",
+    "builder/Canvas.tsx:96",
+    "builder/chat/ActionList.tsx:19",
+    "builder/chat/QuestionCard.tsx:127",
+    "builder/chat/Thinking.tsx:13",
+    "components/AgentTable.tsx:32",
+    "components/create/AttachMenu.tsx:66",
+    "components/create/PromptBox.tsx:169",
+    "pages/BuilderPage.tsx:109"
+   ],
+   "cat": "type",
+   "key": "body-500-l",
+   "status": "ok",
+   "info": "500 13px/20px \u2014 Buttons (all sizes), form labels; Table cell (key column), tags."
+  },
+  {
+   "count": 8,
+   "where": [
+    "builder/AssistantPanel.tsx:243",
+    "builder/AssistantPanel.tsx:256",
+    "builder/AssistantPanel.tsx:270",
+    "builder/chat/QuestionCard.tsx:112",
+    "builder/chat/SummaryCard.tsx:20",
+    "pages/AgentsPage.tsx:32",
+    "pages/templates/shared.tsx:42",
+    "pages/templates/shared.tsx:75"
+   ],
+   "cat": "type",
+   "key": "h6-600",
+   "status": "ok",
+   "info": "600 15px/24px \u2014 Small heading."
+  },
+  {
+   "count": 7,
+   "where": [
+    "builder/AssistantPanel.tsx:164",
+    "builder/AssistantPanel.tsx:287",
+    "builder/chat/SummaryCard.tsx:26",
+    "components/AgentStarter.tsx:38",
+    "components/DemoControls.tsx:28",
+    "components/create/AttachMenu.tsx:118",
+    "components/create/PromptBox.tsx:134"
+   ],
+   "cat": "type",
+   "key": "body-500-m",
+   "status": "ok",
+   "info": "500 12px/18px \u2014 Meta labels."
+  },
+  {
+   "count": 3,
+   "where": [
+    "builder/tabs.tsx:35",
+    "pages/AgentsPage.tsx:80",
+    "pages/templates/shared.tsx:87"
+   ],
+   "cat": "type",
+   "key": "body-500-xl",
+   "status": "ok",
+   "info": "500 14px/22px \u2014 Nav items and emphasised 14px text."
+  },
+  {
+   "count": 3,
+   "where": [
+    "components/IntroModal.tsx:44",
+    "components/IntroModal.tsx:61",
+    "pages/templates/FigmaVersion.tsx:43"
+   ],
+   "cat": "type",
+   "key": "h3-600",
+   "status": "ok",
+   "info": "600 18px/28px \u2014 Section heading."
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/chat/Composer.tsx:75",
+    "components/AgentTags.tsx:19"
+   ],
+   "cat": "type",
+   "key": "body-500-s",
+   "status": "ok",
+   "info": "500 10px/16px \u2014 Tiny labels."
+  },
+  {
+   "count": 2,
+   "where": [
+    "builder/tabs.tsx:15",
+    "components/AgentStarter.tsx:28"
+   ],
+   "cat": "type",
+   "key": "h4-600",
+   "status": "ok",
+   "info": "600 16px/26px \u2014 Card title, modal title."
+  },
+  {
+   "count": 2,
+   "where": [
+    "components/AgentGrid.tsx:36",
+    "components/AgentStarter.tsx:79"
+   ],
+   "cat": "type",
+   "key": "h4",
+   "status": "ok",
+   "info": "500 16px/26px \u2014 Sub heading."
+  },
+  {
+   "count": 2,
+   "where": [
+    "pages/BuilderPage.tsx:89",
+    "pages/templates/FigmaVersion.tsx:50"
+   ],
+   "cat": "type",
+   "key": "body-600-xl",
+   "status": "ok",
+   "info": "600 14px/22px \u2014 Emphasised body, labels."
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:43"
+   ],
+   "cat": "type",
+   "key": "h1",
+   "status": "ok",
+   "info": "600 28px/38px \u2014 Page title."
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/IntroModal.tsx:62"
+   ],
+   "cat": "type",
+   "key": "paragraph-400-xl",
+   "status": "ok",
+   "info": "400 14px/22px \u2014 Default body text."
+  },
+  {
+   "count": 1,
+   "where": [
+    "components/templates/TemplateParts.tsx:43"
+   ],
+   "cat": "type",
+   "key": "body-700-l",
+   "status": "ok",
+   "info": "700 13px/20px \u2014 Strong small text, numbers."
+  }
+ ],
+ "palette": {
+  "blue-20": "#f2f7ff",
+  "blue-30": "#e1edff",
+  "blue-40": "#c7ddff",
+  "blue-50": "#a5c1ff",
+  "blue-60": "#77a1ff",
+  "blue-70": "#4a82ff",
+  "blue-80": "#266aff",
+  "blue-90": "#004fff",
+  "blue-100": "#0047e5",
+  "gray-20": "#d3d8dd",
+  "gray-40": "#b2bbc5",
+  "gray-60": "#909fac",
+  "gray-80": "#6f8294",
+  "gray-100": "#4d657c",
+  "black": "#253748",
+  "white": "#ffffff",
+  "offwhite-10": "#fbfcfc",
+  "offwhite-20": "#fafbfb",
+  "offwhite-40": "#f5f7f8",
+  "offwhite-60": "#eff2f4",
+  "offwhite-80": "#ebeef1",
+  "offwhite-100": "#e6eaed",
+  "green-10": "#e8f6e9",
+  "green-20": "#d1edd4",
+  "green-40": "#a3daa8",
+  "green-60": "#74c87d",
+  "green-80": "#46b551",
+  "green-90": "#18a326",
+  "green-100": "#088114",
+  "red-10": "#fbe8e8",
+  "red-20": "#f7d2d2",
+  "red-40": "#f0a6a6",
+  "red-60": "#e87979",
+  "red-80": "#e14d4d",
+  "red-90": "#d92020",
+  "red-100": "#b10606",
+  "yellow-10": "#fdf6eb",
+  "yellow-20": "#fdf0dc",
+  "yellow-40": "#fbe0b8",
+  "yellow-60": "#f8d195",
+  "yellow-80": "#f6c171",
+  "yellow-100": "#f4b24e",
+  "purple-10": "#f2f1fe",
+  "purple-20": "#e2e1fe",
+  "purple-40": "#c4c3fd",
+  "purple-60": "#a7a5fb",
+  "purple-80": "#8987fa",
+  "purple-100": "#6c69f9",
+  "navy-20": "#d1deed",
+  "navy-40": "#a3bddb",
+  "navy-60": "#769bc8",
+  "navy-80": "#487ab6",
+  "navy-90": "#1a59a4",
+  "navy-100": "#154f94",
+  "pitch-20": "#fce5e0",
+  "pitch-100": "#ee7d64",
+  "background": "#ffffff",
+  "foreground": "#253748",
+  "card": "#ffffff",
+  "card-foreground": "#253748",
+  "popover": "#ffffff",
+  "popover-foreground": "#253748",
+  "primary": "#004fff",
+  "primary-foreground": "#ffffff",
+  "secondary": "#f5f7f8",
+  "secondary-foreground": "#253748",
+  "muted": "#f5f7f8",
+  "muted-foreground": "#6f8294",
+  "accent": "#f2f7ff",
+  "accent-foreground": "#0047e5",
+  "destructive": "#d92020",
+  "success": "#18a326",
+  "success-foreground": "#ffffff",
+  "warning": "#f4b24e",
+  "warning-foreground": "#253748",
+  "border": "#e6eaed",
+  "input": "#d3d8dd",
+  "ring": "#77a1ff"
+ },
+ "notes": {
+  "blue-20": "Lightest blue. The value behind `accent`: hover rows, selected items.",
+  "blue-30": "Blue scale \u2014 primary / action. Use as `bg-blue-30`, `text-blue-30`, `border-blue-30`; inside components prefer the semantic tokens.",
+  "blue-40": "Blue scale \u2014 primary / action. Use as `bg-blue-40`, `text-blue-40`, `border-blue-40`; inside components prefer the semantic tokens.",
+  "blue-50": "Blue scale \u2014 primary / action. Use as `bg-blue-50`, `text-blue-50`, `border-blue-50`; inside components prefer the semantic tokens.",
+  "blue-60": "The value behind `ring`: focus outlines.",
+  "blue-70": "Blue scale \u2014 primary / action. Use as `bg-blue-70`, `text-blue-70`, `border-blue-70`; inside components prefer the semantic tokens.",
+  "blue-80": "Blue scale \u2014 primary / action. Use as `bg-blue-80`, `text-blue-80`, `border-blue-80`; inside components prefer the semantic tokens.",
+  "blue-90": "Blue Base. Brand action colour; the value behind `primary`. White text on it passes (5.9:1).",
+  "blue-100": "Darkest blue (not a light tint as in Tailwind's default). The value behind `accent-foreground`; text on `blue-20`.",
+  "gray-20": "The value behind `input`: input borders.",
+  "gray-40": "Gray scale \u2014 main UI neutral. Use as `bg-gray-40`, `text-gray-40`, `border-gray-40`; inside components prefer the semantic tokens.",
+  "gray-60": "Gray scale \u2014 main UI neutral. Use as `bg-gray-60`, `text-gray-60`, `border-gray-60`; inside components prefer the semantic tokens.",
+  "gray-80": "The value behind `muted-foreground`: helper text, placeholders, meta. 3.96:1 on white \u2014 below 4.5:1 for small text; kept exact from the source, prefer `gray-100` where small text must pass AA.",
+  "gray-100": "Darkest gray; secondary text that must pass AA at small sizes (6.0:1 on white).",
+  "black": "Brand black. The value behind `foreground`: main text on white and offwhite surfaces (12.2:1 on white).",
+  "white": "The value behind `background`, `card`, `popover` and every `*-foreground` on a saturated fill.",
+  "offwhite-10": "Offwhite scale \u2014 backgrounds and borders. Use as `bg-offwhite-10`, `text-offwhite-10`, `border-offwhite-10`; inside components prefer the semantic tokens.",
+  "offwhite-20": "Offwhite scale \u2014 backgrounds and borders. Use as `bg-offwhite-20`, `text-offwhite-20`, `border-offwhite-20`; inside components prefer the semantic tokens.",
+  "offwhite-40": "The value behind `secondary` and `muted`: subtle fills, secondary buttons.",
+  "offwhite-60": "Offwhite scale \u2014 backgrounds and borders. Use as `bg-offwhite-60`, `text-offwhite-60`, `border-offwhite-60`; inside components prefer the semantic tokens.",
+  "offwhite-80": "Offwhite scale \u2014 backgrounds and borders. Use as `bg-offwhite-80`, `text-offwhite-80`, `border-offwhite-80`; inside components prefer the semantic tokens.",
+  "offwhite-100": "The value behind `border`: cards, tables, dividers.",
+  "green-10": "Green scale \u2014 success. Use as `bg-green-10`, `text-green-10`, `border-green-10`; inside components prefer the semantic tokens.",
+  "green-20": "Green scale \u2014 success. Use as `bg-green-20`, `text-green-20`, `border-green-20`; inside components prefer the semantic tokens.",
+  "green-40": "Green scale \u2014 success. Use as `bg-green-40`, `text-green-40`, `border-green-40`; inside components prefer the semantic tokens.",
+  "green-60": "Green scale \u2014 success. Use as `bg-green-60`, `text-green-60`, `border-green-60`; inside components prefer the semantic tokens.",
+  "green-80": "Green scale \u2014 success. Use as `bg-green-80`, `text-green-80`, `border-green-80`; inside components prefer the semantic tokens.",
+  "green-90": "Green Base. The value behind `success`: success badges and states.",
+  "green-100": "Green scale \u2014 success. Use as `bg-green-100`, `text-green-100`, `border-green-100`; inside components prefer the semantic tokens.",
+  "red-10": "Red scale \u2014 error / destructive. Use as `bg-red-10`, `text-red-10`, `border-red-10`; inside components prefer the semantic tokens.",
+  "red-20": "Red scale \u2014 error / destructive. Use as `bg-red-20`, `text-red-20`, `border-red-20`; inside components prefer the semantic tokens.",
+  "red-40": "Red scale \u2014 error / destructive. Use as `bg-red-40`, `text-red-40`, `border-red-40`; inside components prefer the semantic tokens.",
+  "red-60": "Red scale \u2014 error / destructive. Use as `bg-red-60`, `text-red-60`, `border-red-60`; inside components prefer the semantic tokens.",
+  "red-80": "Red scale \u2014 error / destructive. Use as `bg-red-80`, `text-red-80`, `border-red-80`; inside components prefer the semantic tokens.",
+  "red-90": "Red Base. The value behind `destructive`: delete, error text and borders (5.0:1 on white).",
+  "red-100": "Red scale \u2014 error / destructive. Use as `bg-red-100`, `text-red-100`, `border-red-100`; inside components prefer the semantic tokens.",
+  "yellow-10": "Yellow scale \u2014 warning. Use as `bg-yellow-10`, `text-yellow-10`, `border-yellow-10`; inside components prefer the semantic tokens.",
+  "yellow-20": "Yellow scale \u2014 warning. Use as `bg-yellow-20`, `text-yellow-20`, `border-yellow-20`; inside components prefer the semantic tokens.",
+  "yellow-40": "Yellow scale \u2014 warning. Use as `bg-yellow-40`, `text-yellow-40`, `border-yellow-40`; inside components prefer the semantic tokens.",
+  "yellow-60": "Yellow scale \u2014 warning. Use as `bg-yellow-60`, `text-yellow-60`, `border-yellow-60`; inside components prefer the semantic tokens.",
+  "yellow-80": "Yellow scale \u2014 warning. Use as `bg-yellow-80`, `text-yellow-80`, `border-yellow-80`; inside components prefer the semantic tokens.",
+  "yellow-100": "The value behind `warning`: warning badges; text on it is `black`, never white.",
+  "purple-10": "Purple scale \u2014 accent / categories. Use as `bg-purple-10`, `text-purple-10`, `border-purple-10`; inside components prefer the semantic tokens.",
+  "purple-20": "Purple scale \u2014 accent / categories. Use as `bg-purple-20`, `text-purple-20`, `border-purple-20`; inside components prefer the semantic tokens.",
+  "purple-40": "Purple scale \u2014 accent / categories. Use as `bg-purple-40`, `text-purple-40`, `border-purple-40`; inside components prefer the semantic tokens.",
+  "purple-60": "Purple scale \u2014 accent / categories. Use as `bg-purple-60`, `text-purple-60`, `border-purple-60`; inside components prefer the semantic tokens.",
+  "purple-80": "Purple scale \u2014 accent / categories. Use as `bg-purple-80`, `text-purple-80`, `border-purple-80`; inside components prefer the semantic tokens.",
+  "purple-100": "Purple scale \u2014 accent / categories. Use as `bg-purple-100`, `text-purple-100`, `border-purple-100`; inside components prefer the semantic tokens.",
+  "navy-20": "Navy Blue scale \u2014 secondary accent / charts. Use as `bg-navy-20`, `text-navy-20`, `border-navy-20`; inside components prefer the semantic tokens.",
+  "navy-40": "Navy Blue scale \u2014 secondary accent / charts. Use as `bg-navy-40`, `text-navy-40`, `border-navy-40`; inside components prefer the semantic tokens.",
+  "navy-60": "Navy Blue scale \u2014 secondary accent / charts. Use as `bg-navy-60`, `text-navy-60`, `border-navy-60`; inside components prefer the semantic tokens.",
+  "navy-80": "Navy Blue scale \u2014 secondary accent / charts. Use as `bg-navy-80`, `text-navy-80`, `border-navy-80`; inside components prefer the semantic tokens.",
+  "navy-90": "Navy Blue scale \u2014 secondary accent / charts. Use as `bg-navy-90`, `text-navy-90`, `border-navy-90`; inside components prefer the semantic tokens.",
+  "navy-100": "Navy Blue scale \u2014 secondary accent / charts. Use as `bg-navy-100`, `text-navy-100`, `border-navy-100`; inside components prefer the semantic tokens.",
+  "pitch-20": "Pitch scale (Figma Pitch 20) \u2014 light Status background. Use as `bg-pitch-20`.",
+  "pitch-100": "Pitch scale (Figma Pitch) \u2014 solid Status background for Open. Use as `bg-pitch-100`, `text-pitch-100`. Pitch 40\u201380 are still pending.",
+  "background": "= white",
+  "foreground": "= black",
+  "card": "= white",
+  "card-foreground": "= black",
+  "popover": "= white",
+  "popover-foreground": "= black",
+  "primary": "= blue-90",
+  "primary-foreground": "= white",
+  "secondary": "= offwhite-40",
+  "secondary-foreground": "= black",
+  "muted": "= offwhite-40",
+  "muted-foreground": "= gray-80",
+  "accent": "= blue-20",
+  "accent-foreground": "= blue-100",
+  "destructive": "= red-90",
+  "success": "= green-90",
+  "success-foreground": "= white",
+  "warning": "= yellow-100",
+  "warning-foreground": "= black",
+  "border": "= offwhite-100",
+  "input": "= gray-20",
+  "ring": "= blue-60"
+ },
+ "type": {
+  "h1": [
+   "600 28px/38px",
+   "Page title."
+  ],
+  "h2": [
+   "600 24px/36px",
+   "Section title on large pages."
+  ],
+  "h3-600": [
+   "600 18px/28px",
+   "Section heading."
+  ],
+  "h3": [
+   "500 18px/28px",
+   "Softer section heading."
+  ],
+  "h4-600": [
+   "600 16px/26px",
+   "Card title, modal title."
+  ],
+  "h4": [
+   "500 16px/26px",
+   "Sub heading."
+  ],
+  "h5": [
+   "400 16px/26px",
+   "Large body / lead text."
+  ],
+  "h6-600": [
+   "600 15px/24px",
+   "Small heading."
+  ],
+  "h6": [
+   "500 15px/24px",
+   "Small heading, soft."
+  ],
+  "h7": [
+   "400 15px/22px",
+   "Small lead text."
+  ],
+  "body-600-xl": [
+   "600 14px/22px",
+   "Emphasised body, labels."
+  ],
+  "body-500-xl": [
+   "500 14px/22px",
+   "Nav items and emphasised 14px text."
+  ],
+  "paragraph-400-xl": [
+   "400 14px/22px",
+   "Default body text."
+  ],
+  "body-700-l": [
+   "700 13px/20px",
+   "Strong small text, numbers."
+  ],
+  "body-600-l": [
+   "600 13px/20px",
+   "Table header."
+  ],
+  "body-500-l": [
+   "500 13px/20px",
+   "Buttons (all sizes), form labels; Table cell (key column), tags."
+  ],
+  "paragraph-400-l": [
+   "400 13px/20px",
+   "Table cell, descriptions."
+  ],
+  "body-600-m": [
+   "600 12px/18px",
+   "Small emphasis."
+  ],
+  "body-500-m": [
+   "500 12px/18px",
+   "Meta labels."
+  ],
+  "paragraph-400-m": [
+   "400 12px/18px",
+   "Helper text, captions; error text with `text-destructive`."
+  ],
+  "body-500-s": [
+   "500 10px/16px",
+   "Tiny labels."
+  ],
+  "paragraph-400-s": [
+   "400 10px/16px",
+   "Tiny captions, legal."
+  ]
+ },
+ "files": 43
+}

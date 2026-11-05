@@ -1,0 +1,17 @@
+# Dependencies and build output
+node_modules/
+prototype/dist/
+prototype/dist-share/
+
+# Generated share files (rebuilt by `npm run build:share`; Vercel builds its own)
+share/
+
+# Secrets and local tool state
+.env
+.env.*
+.vercel/
+*.local
+
+# OS / editor
+.DS_Store
+.claude/settings.local.json

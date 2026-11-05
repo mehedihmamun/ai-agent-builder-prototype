@@ -1,0 +1,761 @@
+<title>Prototype Style Audit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; summary first, then the fix list, then reference sections. Colors are the REVE Chat tokens themselves. */
+:root {
+  --bg: #f5f7f8; --surface: #ffffff; --fg: #253748; --muted: #4d657c; --faint: #6f8294; --line: #e6eaed;
+  --accent: #004fff; --accent-soft: #e1edff;
+  --high: #d92020; --high-soft: #fbe8e8; --med: #9a6a12; --med-soft: #fdf0dc; --low: #4d657c; --low-soft: #eff2f4;
+  --ok: #088114; --ok-soft: #e8f6e9; --track: #eff2f4;
+  --font: Inter, ui-sans-serif, system-ui, sans-serif; --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121a22; --surface: #1a2530; --fg: #e8eef3; --muted: #b2bbc5; --faint: #909fac; --line: #2a3846;
+  --accent: #77a1ff; --accent-soft: #1b2b4d; --high: #f0a6a6; --high-soft: #3a1d22; --med: #f8d195; --med-soft: #3a3020;
+  --low: #b2bbc5; --low-soft: #24313d; --ok: #a3daa8; --ok-soft: #1c3322; --track: #24313d; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #121a22; --surface: #1a2530; --fg: #e8eef3; --muted: #b2bbc5; --faint: #909fac; --line: #2a3846;
+  --accent: #77a1ff; --accent-soft: #1b2b4d; --high: #f0a6a6; --high-soft: #3a1d22; --med: #f8d195; --med-soft: #3a3020;
+  --low: #b2bbc5; --low-soft: #24313d; --ok: #a3daa8; --ok-soft: #1c3322; --track: #24313d; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 400 14px/22px var(--font); }
+.wrap { max-width: 1040px; margin: 0 auto; padding-block: 32px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+code, .tok { font-family: var(--mono); font-size: 12px; }
+code { background: var(--track); padding: 1px 5px; border-radius: 4px; }
+h1 { font-size: 28px; line-height: 38px; font-weight: 600; margin: 0; text-wrap: balance; }
+h2 { font-size: 18px; line-height: 28px; font-weight: 600; margin: 0 0 4px; }
+.lede { color: var(--muted); max-width: 68ch; margin: 8px 0 0; }
+.eyebrow { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); font-weight: 500; }
+section { margin-top: 48px; }
+.section-sub { color: var(--muted); margin: 0 0 16px; max-width: 70ch; }
+nav.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+nav.jump a { color: var(--accent); text-decoration: none; font-weight: 500; font-size: 13px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+nav.jump a:hover, nav.jump a:focus-visible { border-color: var(--accent); outline: none; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 24px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.stat b { display: block; font-size: 24px; line-height: 32px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.stat span { color: var(--muted); font-size: 13px; }
+.stat.high b { color: var(--high); } .stat.med b { color: var(--med); }
+.issues { display: grid; gap: 12px; }
+.issue { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--low); border-radius: 10px; padding: 14px 16px; min-width: 0; }
+.issue.sev-high { border-left-color: var(--high); } .issue.sev-medium { border-left-color: var(--med); }
+.issue-head { display: flex; gap: 8px; align-items: center; }
+.sev { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; padding: 1px 8px; border-radius: 999px; background: var(--low-soft); color: var(--low); }
+.sev-high .sev { background: var(--high-soft); color: var(--high); } .sev-medium .sev { background: var(--med-soft); color: var(--med); }
+.area { font-size: 12px; color: var(--faint); font-weight: 500; }
+.issue h3 { font-size: 15px; line-height: 24px; font-weight: 600; margin: 6px 0 2px; }
+.issue p { margin: 2px 0; color: var(--muted); }
+.issue .fix { color: var(--fg); }
+details.where { margin-top: 6px; }
+details.where summary { cursor: pointer; color: var(--accent); font-size: 13px; font-weight: 500; }
+details.where ul { margin: 6px 0 0; padding-left: 18px; columns: 2 260px; color: var(--muted); }
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+.swatch { display: flex; gap: 12px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px; min-width: 0; }
+.chip { width: 44px; height: 44px; border-radius: 8px; flex: none; box-shadow: inset 0 0 0 1px rgba(37,55,72,.12); }
+.sw-text { display: flex; flex-direction: column; min-width: 0; }
+.hex, .meta { font-size: 12px; line-height: 18px; color: var(--faint); }
+.flag { font-size: 11px; font-weight: 600; color: var(--med); }
+.type-list { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+.type-row { display: grid; grid-template-columns: minmax(150px, 1.2fr) minmax(150px, 1fr) 120px minmax(120px, 1.4fr) 44px; gap: 12px; align-items: baseline; padding: 10px 16px; border-top: 1px solid var(--line); }
+.type-row:first-child { border-top: 0; }
+.count { text-align: right; color: var(--faint); font-size: 12px; font-variant-numeric: tabular-nums; }
+.scale { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; display: grid; gap: 6px; }
+.bar-row { display: grid; grid-template-columns: 52px 1fr 36px 72px; gap: 10px; align-items: center; font-size: 13px; }
+.bar-label { font-variant-numeric: tabular-nums; font-family: var(--mono); font-size: 12px; }
+.bar-track { background: var(--track); height: 10px; border-radius: 999px; overflow: hidden; }
+.bar { display: block; height: 100%; background: var(--ok); border-radius: 999px; }
+.bar-row.off .bar { background: var(--med); }
+.bar-count { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+.bar-tag { font-size: 11px; font-weight: 600; color: var(--ok); }
+.bar-row.off .bar-tag { color: var(--med); }
+.bar-row.tok .bar { background: var(--accent); } .bar-row.tok .bar-tag { color: var(--accent); }
+.shapes { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; }
+.shape-card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.shape-card.bad { border-color: var(--high); }
+.shape { width: 64px; height: 40px; background: var(--accent-soft); border: 1.5px solid var(--accent); }
+.shape.lift { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+.table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 8px 14px; border-top: 1px solid var(--line); vertical-align: top; }
+th { border-top: 0; color: var(--faint); font-weight: 600; font-size: 12px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+footer { margin-top: 56px; color: var(--faint); font-size: 12px; }
+@media (max-width: 720px) {
+  .type-row { grid-template-columns: 1fr auto; } .type-row .meta.use, .type-row .meta { grid-column: 1 / -1; }
+  .two { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+</style>
+<div class="wrap">
+  <header>
+    <span class="eyebrow">AI Agent Builder prototype · REVE Chat design system</span>
+    <h1>Prototype Style Audit</h1>
+    <p class="lede">Every color, text style, spacing, radius, shadow and fixed size in the prototype code, checked against the REVE Chat design system tokens. Each item lists the file and line where it is used. Nothing has been changed yet; this is a review list.</p>
+    <div class="stats">
+      <div class="stat high"><b>0</b><span>to fix</span></div>
+      <div class="stat med"><b>0</b><span>to review</span></div>
+      <div class="stat"><b>42</b><span>palette colors used</span></div>
+      <div class="stat"><b>15</b><span>text styles used</span></div>
+      <div class="stat"><b>0</b><span>spacing values without a token</span></div>
+      <div class="stat"><b>43</b><span>code files scanned</span></div>
+    </div>
+    <nav class="jump" aria-label="Sections">
+      <a href="#issues">Needs attention</a><a href="#colors">Colors</a><a href="#type">Typography</a><a href="#spacing">Spacing</a><a href="#shape">Radius &amp; shadow</a><a href="#added">Tokens added</a><a href="#sizes">Fixed sizes</a>
+    </nav>
+  </header>
+
+  <section id="issues">
+    <h2>Needs attention</h2>
+    <p class="section-sub"><b>Fix</b>: not from the design system. <b>Review</b>: allowed but off the scale or low contrast, a design decision. <b>Note</b>: fine as is, listed for completeness.</p>
+    <div class="issues"><article class="issue sev-low">
+      <div class="issue-head"><span class="sev">Note</span><span class="area">Color</span></div>
+      <h3>Hard-coded color #8C5FFF (kept)</h3>
+      <p>Not in the REVE Chat palette. Kept on purpose for now: it is part of the AI agent icon from the design file.</p>
+      <p class="fix"><strong>Suggested:</strong> Closest token is <code>purple-100</code> #6C69F9. Keep only if this icon is a fixed brand asset.</p>
+      <details class="where"><summary>5 places</summary><ul><li><code>components/AiAgentIcon.tsx:9</code></li><li><code>components/AiAgentIcon.tsx:13</code></li><li><code>components/AiAgentIcon.tsx:15</code></li><li><code>components/AiAgentIcon.tsx:18</code></li><li><code>components/AiAgentIcon.tsx:22</code></li></ul></details>
+    </article><article class="issue sev-low">
+      <div class="issue-head"><span class="sev">Note</span><span class="area">Color</span></div>
+      <h3>Hard-coded color #EDE6FF (kept)</h3>
+      <p>Not in the REVE Chat palette. Kept on purpose for now: it is part of the AI agent icon from the design file.</p>
+      <p class="fix"><strong>Suggested:</strong> Closest token is <code>purple-20</code> #E2E1FE.</p>
+      <details class="where"><summary>1 place</summary><ul><li><code>components/AiAgentIcon.tsx:5</code></li></ul></details>
+    </article><article class="issue sev-low">
+      <div class="issue-head"><span class="sev">Note</span><span class="area">Contrast</span></div>
+      <h3>Colored icons and badge text</h3>
+      <p>These colors are mostly used on icons and on tinted badge backgrounds, not as text on white: <code>yellow-80</code> (1.64:1), <code>yellow-100</code> (1.85:1), <code>pitch-100</code> (2.71:1), <code>green-90</code> (3.33:1), <code>red-80</code> (3.91:1), <code>purple-100</code> (4.18:1).</p>
+      <p class="fix"><strong>Suggested:</strong> Check them against their real background in Figma. Icons need 3:1; badge text needs 4.5:1 on its tint.</p>
+      <details class="where"><summary>17 places</summary><ul><li><code>builder/AssistantPanel.tsx:162</code></li><li><code>builder/AssistantPanel.tsx:37</code></li><li><code>builder/AssistantPanel.tsx:40</code></li><li><code>builder/AssistantPanel.tsx:42</code></li><li><code>builder/AssistantPanel.tsx:45</code></li><li><code>builder/Canvas.tsx:118</code></li><li><code>builder/Canvas.tsx:120</code></li><li><code>builder/Canvas.tsx:123</code></li><li><code>builder/chat/ActionList.tsx:15</code></li><li><code>builder/chat/QuestionCard.tsx:102</code></li><li><code>builder/tabs.tsx:33</code></li><li><code>components/AgentTags.tsx:16</code></li><li><code>components/AgentTags.tsx:7</code></li><li><code>components/AgentTags.tsx:8</code></li><li><code>components/AgentTags.tsx:9</code></li><li><code>components/IntroModal.tsx:44</code></li><li><code>components/templates/TemplateParts.tsx:7</code></li></ul></details>
+    </article><article class="issue sev-low">
+      <div class="issue-head"><span class="sev">Note</span><span class="area">Contrast</span></div>
+      <h3><code>text-gray-40</code> · 1.94:1 on white</h3>
+      <p>Only used on the dark user bubble in the chat, where it reads fine.</p>
+      <p class="fix"><strong>Suggested:</strong> No change needed.</p>
+      <details class="where"><summary>2 places</summary><ul><li><code>builder/AssistantPanel.tsx:287</code></li><li><code>builder/AssistantPanel.tsx:291</code></li></ul></details>
+    </article><article class="issue sev-low">
+      <div class="issue-head"><span class="sev">Note</span><span class="area">Inline style</span></div>
+      <h3><code>padding: 0px</code></h3>
+      <p>Set in a <code>style</code> attribute, so it can't follow tokens.</p>
+      <p class="fix"><strong>Suggested:</strong> Fine for table column widths and emoji size; otherwise move to a class.</p>
+      <details class="where"><summary>1 place</summary><ul><li><code>builder/Canvas.tsx:232</code></li></ul></details>
+    </article><article class="issue sev-low">
+      <div class="issue-head"><span class="sev">Note</span><span class="area">Inline style</span></div>
+      <h3><code>width: 170px</code></h3>
+      <p>Set in a <code>style</code> attribute, so it can't follow tokens.</p>
+      <p class="fix"><strong>Suggested:</strong> Fine for table column widths and emoji size; otherwise move to a class.</p>
+      <details class="where"><summary>1 place</summary><ul><li><code>builder/tabs.tsx:85</code></li></ul></details>
+    </article><article class="issue sev-low">
+      <div class="issue-head"><span class="sev">Note</span><span class="area">Inline style</span></div>
+      <h3><code>width: 280px</code></h3>
+      <p>Set in a <code>style</code> attribute, so it can't follow tokens.</p>
+      <p class="fix"><strong>Suggested:</strong> Fine for table column widths and emoji size; otherwise move to a class.</p>
+      <details class="where"><summary>1 place</summary><ul><li><code>builder/tabs.tsx:86</code></li></ul></details>
+    </article><article class="issue sev-low">
+      <div class="issue-head"><span class="sev">Note</span><span class="area">Inline style</span></div>
+      <h3><code>fontSize: 40px</code></h3>
+      <p>Set in a <code>style</code> attribute, so it can't follow tokens.</p>
+      <p class="fix"><strong>Suggested:</strong> Fine for table column widths and emoji size; otherwise move to a class.</p>
+      <details class="where"><summary>1 place</summary><ul><li><code>components/AgentStarter.tsx:76</code></li></ul></details>
+    </article><article class="issue sev-low">
+      <div class="issue-head"><span class="sev">Note</span><span class="area">Inline style</span></div>
+      <h3><code>width: 240px</code></h3>
+      <p>Set in a <code>style</code> attribute, so it can't follow tokens.</p>
+      <p class="fix"><strong>Suggested:</strong> Fine for table column widths and emoji size; otherwise move to a class.</p>
+      <details class="where"><summary>1 place</summary><ul><li><code>components/AgentTable.tsx:32</code></li></ul></details>
+    </article><article class="issue sev-low">
+      <div class="issue-head"><span class="sev">Note</span><span class="area">Inline style</span></div>
+      <h3><code>width: 190px</code></h3>
+      <p>Set in a <code>style</code> attribute, so it can't follow tokens.</p>
+      <p class="fix"><strong>Suggested:</strong> Fine for table column widths and emoji size; otherwise move to a class.</p>
+      <details class="where"><summary>1 place</summary><ul><li><code>components/AgentTable.tsx:36</code></li></ul></details>
+    </article></div>
+  </section>
+
+  <section id="colors">
+    <h2>Colors used</h2>
+    <p class="section-sub">All 42 colors below come from the palette. The roles show how often each is used as text, background, border and so on. Orange labels mark gray text colors below 4.5:1 contrast on white.</p>
+    <div class="swatches"><div class="swatch">
+      <span class="chip" style="background:#4d657c"></span>
+      <div class="sw-text">
+        <code class="tok">gray-100</code>
+        <span class="hex">#4D657C</span>
+        <span class="meta">text 69 · bg 3</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#ffffff"></span>
+      <div class="sw-text">
+        <code class="tok">white</code>
+        <span class="hex">#FFFFFF</span>
+        <span class="meta">bg 31 · text 15</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#253748"></span>
+      <div class="sw-text">
+        <code class="tok">foreground</code>
+        <span class="hex">#253748</span>
+        <span class="meta">text 36</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#e6eaed"></span>
+      <div class="sw-text">
+        <code class="tok">border</code>
+        <span class="hex">#E6EAED</span>
+        <span class="meta">border 21</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#18a326"></span>
+      <div class="sw-text">
+        <code class="tok">green-90</code>
+        <span class="hex">#18A326</span>
+        <span class="meta">text 5 · bg 4 · border 2</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#ebeef1"></span>
+      <div class="sw-text">
+        <code class="tok">offwhite-80</code>
+        <span class="hex">#EBEEF1</span>
+        <span class="meta">border 10 · bg 4</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#f5f7f8"></span>
+      <div class="sw-text">
+        <code class="tok">offwhite-40</code>
+        <span class="hex">#F5F7F8</span>
+        <span class="meta">bg 13</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#253748"></span>
+      <div class="sw-text">
+        <code class="tok">black</code>
+        <span class="hex">#253748</span>
+        <span class="meta">bg 6 · text 3</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#004fff"></span>
+      <div class="sw-text">
+        <code class="tok">blue-90</code>
+        <span class="hex">#004FFF</span>
+        <span class="meta">text 9 · border 2 · bg 2</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#eff2f4"></span>
+      <div class="sw-text">
+        <code class="tok">offwhite-60</code>
+        <span class="hex">#EFF2F4</span>
+        <span class="meta">bg 8 · border 1</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#6c69f9"></span>
+      <div class="sw-text">
+        <code class="tok">purple-100</code>
+        <span class="hex">#6C69F9</span>
+        <span class="meta">text 6 · bg 2</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#088114"></span>
+      <div class="sw-text">
+        <code class="tok">green-100</code>
+        <span class="hex">#088114</span>
+        <span class="meta">text 7</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#77a1ff"></span>
+      <div class="sw-text">
+        <code class="tok">blue-60</code>
+        <span class="hex">#77A1FF</span>
+        <span class="meta">border 3 · ring 2</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#d92020"></span>
+      <div class="sw-text">
+        <code class="tok">red-90</code>
+        <span class="hex">#D92020</span>
+        <span class="meta">text 5 · bg 1</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#f2f7ff"></span>
+      <div class="sw-text">
+        <code class="tok">blue-20</code>
+        <span class="hex">#F2F7FF</span>
+        <span class="meta">bg 5</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#b2bbc5"></span>
+      <div class="sw-text">
+        <code class="tok">gray-40</code>
+        <span class="hex">#B2BBC5</span>
+        <span class="meta">text 2 · border 1</span>
+        <span class="flag">1.94:1 as text on white</span>
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#c7ddff"></span>
+      <div class="sw-text">
+        <code class="tok">blue-40</code>
+        <span class="hex">#C7DDFF</span>
+        <span class="meta">ring 2</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#909fac"></span>
+      <div class="sw-text">
+        <code class="tok">gray-60</code>
+        <span class="hex">#909FAC</span>
+        <span class="meta">bg 2</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#f4b24e"></span>
+      <div class="sw-text">
+        <code class="tok">yellow-100</code>
+        <span class="hex">#F4B24E</span>
+        <span class="meta">text 3</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#e6eaed"></span>
+      <div class="sw-text">
+        <code class="tok">offwhite-100</code>
+        <span class="hex">#E6EAED</span>
+        <span class="meta">bg 3</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#0047e5"></span>
+      <div class="sw-text">
+        <code class="tok">blue-100</code>
+        <span class="hex">#0047E5</span>
+        <span class="meta">text 2 · bg 1</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#154f94"></span>
+      <div class="sw-text">
+        <code class="tok">navy-100</code>
+        <span class="hex">#154F94</span>
+        <span class="meta">text 2</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#f2f1fe"></span>
+      <div class="sw-text">
+        <code class="tok">purple-10</code>
+        <span class="hex">#F2F1FE</span>
+        <span class="meta">bg 3</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#e1edff"></span>
+      <div class="sw-text">
+        <code class="tok">blue-30</code>
+        <span class="hex">#E1EDFF</span>
+        <span class="meta">bg 2 · ring 1</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#d1edd4"></span>
+      <div class="sw-text">
+        <code class="tok">green-20</code>
+        <span class="hex">#D1EDD4</span>
+        <span class="meta">bg 3</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#fbe8e8"></span>
+      <div class="sw-text">
+        <code class="tok">red-10</code>
+        <span class="hex">#FBE8E8</span>
+        <span class="meta">bg 3</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#fce5e0"></span>
+      <div class="sw-text">
+        <code class="tok">pitch-20</code>
+        <span class="hex">#FCE5E0</span>
+        <span class="meta">bg 3</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#004fff"></span>
+      <div class="sw-text">
+        <code class="tok">primary</code>
+        <span class="hex">#004FFF</span>
+        <span class="meta">border 1 · bg 1</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#fdf0dc"></span>
+      <div class="sw-text">
+        <code class="tok">yellow-20</code>
+        <span class="hex">#FDF0DC</span>
+        <span class="meta">bg 2</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#d1deed"></span>
+      <div class="sw-text">
+        <code class="tok">navy-20</code>
+        <span class="hex">#D1DEED</span>
+        <span class="meta">bg 2</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#b10606"></span>
+      <div class="sw-text">
+        <code class="tok">red-100</code>
+        <span class="hex">#B10606</span>
+        <span class="meta">text 2</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#e8f6e9"></span>
+      <div class="sw-text">
+        <code class="tok">green-10</code>
+        <span class="hex">#E8F6E9</span>
+        <span class="meta">bg 2</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#a3daa8"></span>
+      <div class="sw-text">
+        <code class="tok">green-40</code>
+        <span class="hex">#A3DAA8</span>
+        <span class="meta">ring 1</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#46b551"></span>
+      <div class="sw-text">
+        <code class="tok">green-80</code>
+        <span class="hex">#46B551</span>
+        <span class="meta">border 2</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#c4c3fd"></span>
+      <div class="sw-text">
+        <code class="tok">purple-40</code>
+        <span class="hex">#C4C3FD</span>
+        <span class="meta">ring 1</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#fafbfb"></span>
+      <div class="sw-text">
+        <code class="tok">offwhite-20</code>
+        <span class="hex">#FAFBFB</span>
+        <span class="meta">bg 1</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#d3d8dd"></span>
+      <div class="sw-text">
+        <code class="tok">gray-20</code>
+        <span class="hex">#D3D8DD</span>
+        <span class="meta">border 1 · bg 1</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#e14d4d"></span>
+      <div class="sw-text">
+        <code class="tok">red-80</code>
+        <span class="hex">#E14D4D</span>
+        <span class="meta">text 1</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#ee7d64"></span>
+      <div class="sw-text">
+        <code class="tok">pitch-100</code>
+        <span class="hex">#EE7D64</span>
+        <span class="meta">text 1</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#f6c171"></span>
+      <div class="sw-text">
+        <code class="tok">yellow-80</code>
+        <span class="hex">#F6C171</span>
+        <span class="meta">text 1</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#f0a6a6"></span>
+      <div class="sw-text">
+        <code class="tok">red-40</code>
+        <span class="hex">#F0A6A6</span>
+        <span class="meta">ring 1</span>
+        
+      </div>
+    </div><div class="swatch">
+      <span class="chip" style="background:#6f8294"></span>
+      <div class="sw-text">
+        <code class="tok">gray-80</code>
+        <span class="hex">#6F8294</span>
+        <span class="meta">via CSS variable</span>
+        
+      </div>
+    </div></div>
+    <p class="section-sub" style="margin-top:16px">Palette colors not used anywhere: <code>blue-50</code>, <code>blue-70</code>, <code>blue-80</code>, <code>offwhite-10</code>, <code>green-60</code>, <code>red-20</code>, <code>red-60</code>, <code>yellow-10</code>, <code>yellow-40</code>, <code>yellow-60</code>, <code>purple-20</code>, <code>purple-60</code>, <code>purple-80</code>, <code>navy-40</code>, <code>navy-60</code>, <code>navy-80</code>, <code>navy-90</code>.</p>
+  </section>
+
+  <section id="type">
+    <h2>Typography</h2>
+    <p class="section-sub">Every text style token in use, largest first, rendered at its real size. All are design-system styles; the one direct font weight is in the list above.</p>
+    <div class="type-list"><div class="type-row">
+      <span class="sample" style="font-weight:600;font-size:28px;line-height:38px">Agent Builder</span>
+      <code class="tok">text-h1</code>
+      <span class="meta">600 28px/38px</span>
+      <span class="meta use">Page title.</span>
+      <span class="count">1×</span>
+    </div><div class="type-row">
+      <span class="sample" style="font-weight:600;font-size:18px;line-height:28px">Agent Builder</span>
+      <code class="tok">text-h3-600</code>
+      <span class="meta">600 18px/28px</span>
+      <span class="meta use">Section heading.</span>
+      <span class="count">3×</span>
+    </div><div class="type-row">
+      <span class="sample" style="font-weight:600;font-size:16px;line-height:26px">Agent Builder</span>
+      <code class="tok">text-h4-600</code>
+      <span class="meta">600 16px/26px</span>
+      <span class="meta use">Card title, modal title.</span>
+      <span class="count">2×</span>
+    </div><div class="type-row">
+      <span class="sample" style="font-weight:500;font-size:16px;line-height:26px">Agent Builder</span>
+      <code class="tok">text-h4</code>
+      <span class="meta">500 16px/26px</span>
+      <span class="meta use">Sub heading.</span>
+      <span class="count">2×</span>
+    </div><div class="type-row">
+      <span class="sample" style="font-weight:600;font-size:15px;line-height:24px">Agent Builder</span>
+      <code class="tok">text-h6-600</code>
+      <span class="meta">600 15px/24px</span>
+      <span class="meta use">Small heading.</span>
+      <span class="count">8×</span>
+    </div><div class="type-row">
+      <span class="sample" style="font-weight:500;font-size:14px;line-height:22px">Agent Builder</span>
+      <code class="tok">text-body-500-xl</code>
+      <span class="meta">500 14px/22px</span>
+      <span class="meta use">Nav items and emphasised 14px text.</span>
+      <span class="count">3×</span>
+    </div><div class="type-row">
+      <span class="sample" style="font-weight:600;font-size:14px;line-height:22px">Agent Builder</span>
+      <code class="tok">text-body-600-xl</code>
+      <span class="meta">600 14px/22px</span>
+      <span class="meta use">Emphasised body, labels.</span>
+      <span class="count">2×</span>
+    </div><div class="type-row">
+      <span class="sample" style="font-weight:400;font-size:14px;line-height:22px">Agent Builder</span>
+      <code class="tok">text-paragraph-400-xl</code>
+      <span class="meta">400 14px/22px</span>
+      <span class="meta use">Default body text.</span>
+      <span class="count">1×</span>
+    </div><div class="type-row">
+      <span class="sample" style="font-weight:400;font-size:13px;line-height:20px">Agent Builder</span>
+      <code class="tok">text-paragraph-400-l</code>
+      <span class="meta">400 13px/20px</span>
+      <span class="meta use">Table cell, descriptions.</span>
+      <span class="count">27×</span>
+    </div><div class="type-row">
+      <span class="sample" style="font-weight:500;font-size:13px;line-height:20px">Agent Builder</span>
+      <code class="tok">text-body-500-l</code>
+      <span class="meta">500 13px/20px</span>
+      <span class="meta use">Buttons (all sizes), form labels; Table cell (key column), tags.</span>
+      <span class="count">9×</span>
+    </div><div class="type-row">
+      <span class="sample" style="font-weight:700;font-size:13px;line-height:20px">Agent Builder</span>
+      <code class="tok">text-body-700-l</code>
+      <span class="meta">700 13px/20px</span>
+      <span class="meta use">Strong small text, numbers.</span>
+      <span class="count">1×</span>
+    </div><div class="type-row">
+      <span class="sample" style="font-weight:400;font-size:12px;line-height:18px">Agent Builder</span>
+      <code class="tok">text-paragraph-400-m</code>
+      <span class="meta">400 12px/18px</span>
+      <span class="meta use">Helper text, captions; error text with `text-destructive`.</span>
+      <span class="count">13×</span>
+    </div><div class="type-row">
+      <span class="sample" style="font-weight:500;font-size:12px;line-height:18px">Agent Builder</span>
+      <code class="tok">text-body-500-m</code>
+      <span class="meta">500 12px/18px</span>
+      <span class="meta use">Meta labels.</span>
+      <span class="count">7×</span>
+    </div><div class="type-row">
+      <span class="sample" style="font-weight:400;font-size:10px;line-height:16px">Agent Builder</span>
+      <code class="tok">text-paragraph-400-s</code>
+      <span class="meta">400 10px/16px</span>
+      <span class="meta use">Tiny captions, legal.</span>
+      <span class="count">11×</span>
+    </div><div class="type-row">
+      <span class="sample" style="font-weight:500;font-size:10px;line-height:16px">Agent Builder</span>
+      <code class="tok">text-body-500-s</code>
+      <span class="meta">500 10px/16px</span>
+      <span class="meta use">Tiny labels.</span>
+      <span class="count">2×</span>
+    </div></div>
+  </section>
+
+  <section id="spacing">
+    <h2>Spacing</h2>
+    <p class="section-sub">How often each spacing value is used (padding, margin, gap, offsets). Green: the design system's 4, 8, 12, 16, 24, 32, 48px scale. Blue: values between those steps, each now a named token (see below). Orange would mean a value with no token.</p>
+    <div class="scale"><div class="bar-row tok">
+      <span class="bar-label">2px</span>
+      <span class="bar-track"><span class="bar" style="width:9%"></span></span>
+      <span class="bar-count">5</span>
+      <span class="bar-tag">new token</span>
+    </div><div class="bar-row on">
+      <span class="bar-label">4px</span>
+      <span class="bar-track"><span class="bar" style="width:81%"></span></span>
+      <span class="bar-count">44</span>
+      <span class="bar-tag">design system</span>
+    </div><div class="bar-row tok">
+      <span class="bar-label">6px</span>
+      <span class="bar-track"><span class="bar" style="width:33%"></span></span>
+      <span class="bar-count">18</span>
+      <span class="bar-tag">new token</span>
+    </div><div class="bar-row on">
+      <span class="bar-label">8px</span>
+      <span class="bar-track"><span class="bar" style="width:100%"></span></span>
+      <span class="bar-count">54</span>
+      <span class="bar-tag">design system</span>
+    </div><div class="bar-row tok">
+      <span class="bar-label">10px</span>
+      <span class="bar-track"><span class="bar" style="width:28%"></span></span>
+      <span class="bar-count">15</span>
+      <span class="bar-tag">new token</span>
+    </div><div class="bar-row on">
+      <span class="bar-label">12px</span>
+      <span class="bar-track"><span class="bar" style="width:59%"></span></span>
+      <span class="bar-count">32</span>
+      <span class="bar-tag">design system</span>
+    </div><div class="bar-row tok">
+      <span class="bar-label">14px</span>
+      <span class="bar-track"><span class="bar" style="width:4%"></span></span>
+      <span class="bar-count">1</span>
+      <span class="bar-tag">new token</span>
+    </div><div class="bar-row on">
+      <span class="bar-label">16px</span>
+      <span class="bar-track"><span class="bar" style="width:48%"></span></span>
+      <span class="bar-count">26</span>
+      <span class="bar-tag">design system</span>
+    </div><div class="bar-row tok">
+      <span class="bar-label">20px</span>
+      <span class="bar-track"><span class="bar" style="width:17%"></span></span>
+      <span class="bar-count">9</span>
+      <span class="bar-tag">new token</span>
+    </div><div class="bar-row on">
+      <span class="bar-label">24px</span>
+      <span class="bar-track"><span class="bar" style="width:17%"></span></span>
+      <span class="bar-count">9</span>
+      <span class="bar-tag">design system</span>
+    </div><div class="bar-row on">
+      <span class="bar-label">32px</span>
+      <span class="bar-track"><span class="bar" style="width:20%"></span></span>
+      <span class="bar-count">11</span>
+      <span class="bar-tag">design system</span>
+    </div><div class="bar-row tok">
+      <span class="bar-label">40px</span>
+      <span class="bar-track"><span class="bar" style="width:6%"></span></span>
+      <span class="bar-count">3</span>
+      <span class="bar-tag">new token</span>
+    </div><div class="bar-row tok">
+      <span class="bar-label">64px</span>
+      <span class="bar-track"><span class="bar" style="width:4%"></span></span>
+      <span class="bar-count">2</span>
+      <span class="bar-tag">new token</span>
+    </div></div>
+  </section>
+
+  <section id="shape">
+    <div class="two">
+      <div><h2>Radius</h2><p class="section-sub">Red outline: not a radius token.</p><div class="shapes"><div class="shape-card ">
+      <span class="shape" style="border-radius:999px"></span>
+      <code class="tok">rounded-full</code>
+      <span class="meta">999px · 15×</span>
+    </div><div class="shape-card ">
+      <span class="shape" style="border-radius:14px"></span>
+      <code class="tok">rounded-xl</code>
+      <span class="meta">14px · 11×</span>
+    </div><div class="shape-card ">
+      <span class="shape" style="border-radius:10px"></span>
+      <code class="tok">rounded-lg</code>
+      <span class="meta">10px · 10×</span>
+    </div><div class="shape-card ">
+      <span class="shape" style="border-radius:8px"></span>
+      <code class="tok">rounded-md</code>
+      <span class="meta">8px · 7×</span>
+    </div><div class="shape-card ">
+      <span class="shape" style="border-radius:6px"></span>
+      <code class="tok">rounded-sm</code>
+      <span class="meta">6px · 5×</span>
+    </div><div class="shape-card ">
+      <span class="shape" style="border-radius:4px"></span>
+      <code class="tok">rounded-4</code>
+      <span class="meta">4px · 3×</span>
+    </div><div class="shape-card ">
+      <span class="shape" style="border-radius:20px"></span>
+      <code class="tok">rounded-20</code>
+      <span class="meta">20px · 1×</span>
+    </div></div></div>
+      <div><h2>Shadow</h2><p class="section-sub">All shadows use the five design-system elevations.</p><div class="shapes"><div class="shape-card">
+      <span class="shape lift" style="box-shadow:0 2px 3px rgba(40,46,61,.12)"></span>
+      <code class="tok">shadow-xs</code>
+      <span class="meta">2×</span>
+    </div><div class="shape-card">
+      <span class="shape lift" style="box-shadow:0 3px 12px 0 rgba(67,77,101,.14)"></span>
+      <code class="tok">shadow-sm</code>
+      <span class="meta">9×</span>
+    </div><div class="shape-card">
+      <span class="shape lift" style="box-shadow:0 7px 25px 0 rgba(67,77,101,.14)"></span>
+      <code class="tok">shadow-md</code>
+      <span class="meta">5×</span>
+    </div><div class="shape-card">
+      <span class="shape lift" style="box-shadow:0 12px 35px 0 rgba(67,77,101,.14)"></span>
+      <code class="tok">shadow-lg</code>
+      <span class="meta">1×</span>
+    </div><div class="shape-card">
+      <span class="shape lift" style="box-shadow:0 15px 48px 0 rgba(67,77,101,.17)"></span>
+      <code class="tok">shadow-xl</code>
+      <span class="meta">1×</span>
+    </div><div class="shape-card">
+      <span class="shape lift" style="box-shadow:none"></span>
+      <code class="tok">shadow-none</code>
+      <span class="meta">1×</span>
+    </div></div></div>
+    </div>
+  </section>
+
+  <section id="added">
+    <h2>Tokens added to the prototype</h2>
+    <p class="section-sub">Defined in <code>src/index.css</code>. Existing design system tokens are unchanged.</p>
+    <div class="two">
+      <div class="table-wrap"><table><thead><tr><th>Spacing token</th><th>Value</th><th>Classes</th></tr></thead><tbody><tr><td><code>--spacing-0.5</code></td><td>2px</td><td><code>py-0.5</code>, <code>p-0.5</code>, <code>gap-0.5</code></td></tr><tr><td><code>--spacing-1.5</code></td><td>6px</td><td><code>py-1.5</code>, <code>gap-1.5</code>, <code>px-1.5</code>, <code>pl-1.5</code>, <code>ml-1.5</code>, <code>pr-1.5</code></td></tr><tr><td><code>--spacing-2.5</code></td><td>10px</td><td><code>gap-2.5</code>, <code>p-2.5</code>, <code>px-2.5</code>, <code>left-2.5</code>, <code>space-y-2.5</code>, <code>mt-2.5</code>, <code>pl-2.5</code></td></tr><tr><td><code>--spacing-3.5</code></td><td>14px</td><td><code>pl-3.5</code></td></tr><tr><td><code>--spacing-5</code></td><td>20px</td><td><code>gap-5</code>, <code>p-5</code>, <code>space-y-5</code>, <code>py-5</code>, <code>pl-5</code>, <code>mt-5</code>, <code>px-5</code></td></tr><tr><td><code>--spacing-10</code></td><td>40px</td><td><code>py-10</code>, <code>mt-10</code></td></tr><tr><td><code>--spacing-16</code></td><td>64px</td><td><code>py-16</code></td></tr></tbody></table></div>
+      <div class="table-wrap"><table><thead><tr><th>Radius token</th><th>Value</th><th>Class</th></tr></thead><tbody><tr><td><code>--radius-2</code></td><td>2px</td><td><code>rounded-2</code></td></tr><tr><td><code>--radius-4</code></td><td>4px</td><td><code>rounded-4</code></td></tr><tr><td><code>--radius-12</code></td><td>12px</td><td><code>rounded-12</code></td></tr><tr><td><code>--radius-16</code></td><td>16px</td><td><code>rounded-16</code></td></tr><tr><td><code>--radius-20</code></td><td>20px</td><td><code>rounded-20</code></td></tr><tr><td><code>--radius-24</code></td><td>24px</td><td><code>rounded-24</code></td></tr><tr><td><code>--radius-28</code></td><td>28px</td><td><code>rounded-28</code></td></tr><tr><td><code>--radius-32</code></td><td>32px</td><td><code>rounded-32</code></td></tr></tbody></table></div>
+    </div>
+  </section>
+
+  <section id="sizes">
+    <h2>Fixed sizes</h2>
+    <p class="section-sub">Hand-picked widths and heights. These are usually layout decisions (panel widths, prompt box width), not mistakes, but they don't scale with the design system.</p>
+    <div class="table-wrap"><table><thead><tr><th>Class</th><th>Value</th><th>Where</th></tr></thead><tbody><tr><td><code>max-w-[220px]</code></td><td>220px</td><td><details class="where"><summary>2 places</summary><ul><li><code>components/create/AttachMenu.tsx:118</code></li><li><code>pages/BuilderPage.tsx:139</code></li></ul></details></td></tr><tr><td><code>w-[200px]</code></td><td>200px</td><td><details class="where"><summary>2 places</summary><ul><li><code>pages/AgentsPage.tsx:50</code></li><li><code>pages/templates/shared.tsx:61</code></li></ul></details></td></tr><tr><td><code>max-w-[85%]</code></td><td>85%</td><td><details class="where"><summary>1 place</summary><ul><li><code>builder/AssistantPanel.tsx:58</code></li></ul></details></td></tr><tr><td><code>max-w-[90%]</code></td><td>90%</td><td><details class="where"><summary>1 place</summary><ul><li><code>builder/AssistantPanel.tsx:74</code></li></ul></details></td></tr><tr><td><code>w-[210px]</code></td><td>210px</td><td><details class="where"><summary>1 place</summary><ul><li><code>builder/Canvas.tsx:73</code></li></ul></details></td></tr><tr><td><code>w-[260px]</code></td><td>260px</td><td><details class="where"><summary>1 place</summary><ul><li><code>builder/Canvas.tsx:89</code></li></ul></details></td></tr><tr><td><code>w-[92px]</code></td><td>92px</td><td><details class="where"><summary>1 place</summary><ul><li><code>builder/Canvas.tsx:130</code></li></ul></details></td></tr><tr><td><code>max-w-[1200px]</code></td><td>1200px</td><td><details class="where"><summary>1 place</summary><ul><li><code>components/AgentStarter.tsx:26</code></li></ul></details></td></tr><tr><td><code>max-w-[720px]</code></td><td>720px</td><td><details class="where"><summary>1 place</summary><ul><li><code>components/AgentStarter.tsx:31</code></li></ul></details></td></tr><tr><td><code>w-[700px]</code></td><td>700px</td><td><details class="where"><summary>1 place</summary><ul><li><code>components/IntroModal.tsx:38</code></li></ul></details></td></tr><tr><td><code>max-w-[calc(100vw-32px)]</code></td><td>calc(100vw-32px)</td><td><details class="where"><summary>1 place</summary><ul><li><code>components/IntroModal.tsx:38</code></li></ul></details></td></tr><tr><td><code>max-w-[700px]</code></td><td>700px</td><td><details class="where"><summary>1 place</summary><ul><li><code>components/IntroModal.tsx:38</code></li></ul></details></td></tr><tr><td><code>max-w-[560px]</code></td><td>560px</td><td><details class="where"><summary>1 place</summary><ul><li><code>components/IntroModal.tsx:62</code></li></ul></details></td></tr><tr><td><code>min-h-[104px]</code></td><td>104px</td><td><details class="where"><summary>1 place</summary><ul><li><code>components/create/PromptBox.tsx:127</code></li></ul></details></td></tr><tr><td><code>max-w-[260px]</code></td><td>260px</td><td><details class="where"><summary>1 place</summary><ul><li><code>pages/BuilderPage.tsx:78</code></li></ul></details></td></tr><tr><td><code>min-w-[120px]</code></td><td>120px</td><td><details class="where"><summary>1 place</summary><ul><li><code>pages/templates/FigmaVersion.tsx:14</code></li></ul></details></td></tr><tr><td><code>w-[560px]</code></td><td>560px</td><td><details class="where"><summary>1 place</summary><ul><li><code>pages/templates/FigmaVersion.tsx:40</code></li></ul></details></td></tr><tr><td><code>h-[250px]</code></td><td>250px</td><td><details class="where"><summary>1 place</summary><ul><li><code>pages/templates/FigmaVersion.tsx:56</code></li></ul></details></td></tr></tbody></table></div>
+  </section>
+
+  <footer>Generated 05 Nov 2026 from <code>prototype/src</code> (43 files). Re-run with <code>scripts/style-audit.py</code> then <code>scripts/style-audit-report.py</code>.</footer>
+</div>

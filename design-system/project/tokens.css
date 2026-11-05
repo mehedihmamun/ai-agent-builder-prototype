@@ -1,0 +1,281 @@
+/* REVEChat Design System — generated from tokens.json */
+:root, [data-theme="light"] {
+  --blue-20: #f2f7ff; /* Lightest blue. The value behind `accent`: hover rows, selected items. */
+  --blue-30: #e1edff; /* Blue scale — primary / action. Use as `bg-blue-30`, `text-blue-30`, `border-blue-30`; inside components prefer the semantic tokens. */
+  --blue-40: #c7ddff; /* Blue scale — primary / action. Use as `bg-blue-40`, `text-blue-40`, `border-blue-40`; inside components prefer the semantic tokens. */
+  --blue-50: #a5c1ff; /* Blue scale — primary / action. Use as `bg-blue-50`, `text-blue-50`, `border-blue-50`; inside components prefer the semantic tokens. */
+  --blue-60: #77a1ff; /* The value behind `ring`: focus outlines. */
+  --blue-70: #4a82ff; /* Blue scale — primary / action. Use as `bg-blue-70`, `text-blue-70`, `border-blue-70`; inside components prefer the semantic tokens. */
+  --blue-80: #266aff; /* Blue scale — primary / action. Use as `bg-blue-80`, `text-blue-80`, `border-blue-80`; inside components prefer the semantic tokens. */
+  --blue-90: #004fff; /* Blue Base. Brand action colour; the value behind `primary`. White text on it passes (5.9:1). */
+  --blue-100: #0047e5; /* Darkest blue (not a light tint as in Tailwind's default). The value behind `accent-foreground`; text on `blue-20`. */
+  --gray-20: #d3d8dd; /* The value behind `input`: input borders. */
+  --gray-40: #b2bbc5; /* Gray scale — main UI neutral. Use as `bg-gray-40`, `text-gray-40`, `border-gray-40`; inside components prefer the semantic tokens. */
+  --gray-60: #909fac; /* Gray scale — main UI neutral. Use as `bg-gray-60`, `text-gray-60`, `border-gray-60`; inside components prefer the semantic tokens. */
+  --gray-80: #6f8294; /* The value behind `muted-foreground`: helper text, placeholders, meta. 3.96:1 on white — below 4.5:1 for small text; kept exact from the source, prefer `gray-100` where small text must pass AA. */
+  --gray-100: #4d657c; /* Darkest gray; secondary text that must pass AA at small sizes (6.0:1 on white). */
+  --black: #253748; /* Brand black. The value behind `foreground`: main text on white and offwhite surfaces (12.2:1 on white). */
+  --white: #ffffff; /* The value behind `background`, `card`, `popover` and every `*-foreground` on a saturated fill. */
+  --offwhite-10: #fbfcfc; /* Offwhite scale — backgrounds and borders. Use as `bg-offwhite-10`, `text-offwhite-10`, `border-offwhite-10`; inside components prefer the semantic tokens. */
+  --offwhite-20: #fafbfb; /* Offwhite scale — backgrounds and borders. Use as `bg-offwhite-20`, `text-offwhite-20`, `border-offwhite-20`; inside components prefer the semantic tokens. */
+  --offwhite-40: #f5f7f8; /* The value behind `secondary` and `muted`: subtle fills, secondary buttons. */
+  --offwhite-60: #eff2f4; /* Offwhite scale — backgrounds and borders. Use as `bg-offwhite-60`, `text-offwhite-60`, `border-offwhite-60`; inside components prefer the semantic tokens. */
+  --offwhite-80: #ebeef1; /* Offwhite scale — backgrounds and borders. Use as `bg-offwhite-80`, `text-offwhite-80`, `border-offwhite-80`; inside components prefer the semantic tokens. */
+  --offwhite-100: #e6eaed; /* The value behind `border`: cards, tables, dividers. */
+  --green-10: #e8f6e9; /* Green scale — success. Use as `bg-green-10`, `text-green-10`, `border-green-10`; inside components prefer the semantic tokens. */
+  --green-20: #d1edd4; /* Green scale — success. Use as `bg-green-20`, `text-green-20`, `border-green-20`; inside components prefer the semantic tokens. */
+  --green-40: #a3daa8; /* Green scale — success. Use as `bg-green-40`, `text-green-40`, `border-green-40`; inside components prefer the semantic tokens. */
+  --green-60: #74c87d; /* Green scale — success. Use as `bg-green-60`, `text-green-60`, `border-green-60`; inside components prefer the semantic tokens. */
+  --green-80: #46b551; /* Green scale — success. Use as `bg-green-80`, `text-green-80`, `border-green-80`; inside components prefer the semantic tokens. */
+  --green-90: #18a326; /* Green Base. The value behind `success`: success badges and states. */
+  --green-100: #088114; /* Green scale — success. Use as `bg-green-100`, `text-green-100`, `border-green-100`; inside components prefer the semantic tokens. */
+  --red-10: #fbe8e8; /* Red scale — error / destructive. Use as `bg-red-10`, `text-red-10`, `border-red-10`; inside components prefer the semantic tokens. */
+  --red-20: #f7d2d2; /* Red scale — error / destructive. Use as `bg-red-20`, `text-red-20`, `border-red-20`; inside components prefer the semantic tokens. */
+  --red-40: #f0a6a6; /* Red scale — error / destructive. Use as `bg-red-40`, `text-red-40`, `border-red-40`; inside components prefer the semantic tokens. */
+  --red-60: #e87979; /* Red scale — error / destructive. Use as `bg-red-60`, `text-red-60`, `border-red-60`; inside components prefer the semantic tokens. */
+  --red-80: #e14d4d; /* Red scale — error / destructive. Use as `bg-red-80`, `text-red-80`, `border-red-80`; inside components prefer the semantic tokens. */
+  --red-90: #d92020; /* Red Base. The value behind `destructive`: delete, error text and borders (5.0:1 on white). */
+  --red-100: #b10606; /* Red scale — error / destructive. Use as `bg-red-100`, `text-red-100`, `border-red-100`; inside components prefer the semantic tokens. */
+  --yellow-10: #fdf6eb; /* Yellow scale — warning. Use as `bg-yellow-10`, `text-yellow-10`, `border-yellow-10`; inside components prefer the semantic tokens. */
+  --yellow-20: #fdf0dc; /* Yellow scale — warning. Use as `bg-yellow-20`, `text-yellow-20`, `border-yellow-20`; inside components prefer the semantic tokens. */
+  --yellow-40: #fbe0b8; /* Yellow scale — warning. Use as `bg-yellow-40`, `text-yellow-40`, `border-yellow-40`; inside components prefer the semantic tokens. */
+  --yellow-60: #f8d195; /* Yellow scale — warning. Use as `bg-yellow-60`, `text-yellow-60`, `border-yellow-60`; inside components prefer the semantic tokens. */
+  --yellow-80: #f6c171; /* Yellow scale — warning. Use as `bg-yellow-80`, `text-yellow-80`, `border-yellow-80`; inside components prefer the semantic tokens. */
+  --yellow-100: #f4b24e; /* The value behind `warning`: warning badges; text on it is `black`, never white. */
+  --purple-10: #f2f1fe; /* Purple scale — accent / categories. Use as `bg-purple-10`, `text-purple-10`, `border-purple-10`; inside components prefer the semantic tokens. */
+  --purple-20: #e2e1fe; /* Purple scale — accent / categories. Use as `bg-purple-20`, `text-purple-20`, `border-purple-20`; inside components prefer the semantic tokens. */
+  --purple-40: #c4c3fd; /* Purple scale — accent / categories. Use as `bg-purple-40`, `text-purple-40`, `border-purple-40`; inside components prefer the semantic tokens. */
+  --purple-60: #a7a5fb; /* Purple scale — accent / categories. Use as `bg-purple-60`, `text-purple-60`, `border-purple-60`; inside components prefer the semantic tokens. */
+  --purple-80: #8987fa; /* Purple scale — accent / categories. Use as `bg-purple-80`, `text-purple-80`, `border-purple-80`; inside components prefer the semantic tokens. */
+  --purple-100: #6c69f9; /* Purple scale — accent / categories. Use as `bg-purple-100`, `text-purple-100`, `border-purple-100`; inside components prefer the semantic tokens. */
+  --navy-20: #d1deed; /* Navy Blue scale — secondary accent / charts. Use as `bg-navy-20`, `text-navy-20`, `border-navy-20`; inside components prefer the semantic tokens. */
+  --navy-40: #a3bddb; /* Navy Blue scale — secondary accent / charts. Use as `bg-navy-40`, `text-navy-40`, `border-navy-40`; inside components prefer the semantic tokens. */
+  --navy-60: #769bc8; /* Navy Blue scale — secondary accent / charts. Use as `bg-navy-60`, `text-navy-60`, `border-navy-60`; inside components prefer the semantic tokens. */
+  --navy-80: #487ab6; /* Navy Blue scale — secondary accent / charts. Use as `bg-navy-80`, `text-navy-80`, `border-navy-80`; inside components prefer the semantic tokens. */
+  --navy-90: #1a59a4; /* Navy Blue scale — secondary accent / charts. Use as `bg-navy-90`, `text-navy-90`, `border-navy-90`; inside components prefer the semantic tokens. */
+  --navy-100: #154f94; /* Navy Blue scale — secondary accent / charts. Use as `bg-navy-100`, `text-navy-100`, `border-navy-100`; inside components prefer the semantic tokens. */
+  --pitch-20: #fce5e0; /* Pitch scale (Figma Pitch 20) — light Status background. Use as `bg-pitch-20`. */
+  --pitch-100: #ee7d64; /* Pitch scale (Figma Pitch) — solid Status background for Open. Use as `bg-pitch-100`, `text-pitch-100`. Pitch 40–80 are still pending. */
+  --background: var(--white); /* Page background (`bg-background`). */
+  --foreground: var(--black); /* Main text (`text-foreground`) on `background`, `card`, `muted`. */
+  --card: var(--white); /* Card surface (`bg-card`). */
+  --card-foreground: var(--black); /* Text on `card`. */
+  --popover: var(--white); /* Dialog and popover surface (`bg-popover`). */
+  --popover-foreground: var(--black); /* Text on `popover`. */
+  --primary: var(--blue-90); /* Primary button, links, active states. One primary button per screen or section. */
+  --primary-foreground: var(--white); /* Text and icons on `primary` (5.9:1). */
+  --secondary: var(--offwhite-40); /* Secondary button, subtle fills. */
+  --secondary-foreground: var(--black); /* Text on `secondary`. */
+  --muted: var(--offwhite-40); /* Muted backgrounds; hover fill for outline and ghost buttons; card and dialog footers at 50%. */
+  --muted-foreground: var(--gray-80); /* Helper text, placeholders, meta on `background` and `muted` (3.96:1 on white — under AA for small text; source value kept). */
+  --accent: var(--blue-20); /* Hover rows, selected items. */
+  --accent-foreground: var(--blue-100); /* Text on `accent`. */
+  --destructive: var(--red-90); /* Delete, error. Destructive button and badge use it as text on a 10% tint of itself (4.3:1 — just under AA, source kept); error text and invalid borders. */
+  --success: var(--green-90); /* Success / Paid / Active states (`bg-success text-success-foreground`). */
+  --success-foreground: var(--white); /* Text on `success`. 3.3:1 on green-90 — under 4.5:1 for 12px badge text; source value kept, flagged. */
+  --warning: var(--yellow-100); /* Warning / Pending states (`bg-warning text-warning-foreground`). */
+  --warning-foreground: var(--black); /* Text on `warning` — always black, never white (6.6:1). */
+  --border: var(--offwhite-100); /* Cards, tables, dividers (`border-border`); the default border colour on every element. */
+  --input: var(--gray-20); /* Input borders (`border-input`). */
+  --ring: var(--blue-60); /* Focus outline: components draw it at 50% as a 3px ring (`ring-ring/50`) with a `ring` border. */
+  --shadow-xs: 0 2px 3px rgba(40, 46, 61, 0.12); /* Level 1 — subtle lift: inputs, list rows, small cards on a gray background. (0 1 3 0, #282E3D 12%) */
+  --shadow-sm: 0 3px 12px 0 rgba(67, 77, 101, 0.14); /* Level 2 — cards, canvas nodes, hover state of clickable cards. (0 3 12 0, #434D65 14%) */
+  --shadow-md: 0 7px 25px 0 rgba(67, 77, 101, 0.14); /* Level 3 — dropdowns, popovers, menus, tooltips, floating toolbars. (0 7 25 0, #434D65 14%) */
+  --shadow-lg: 0 12px 35px 0 rgba(67, 77, 101, 0.14); /* Level 4 — side drawers, sticky panels, toasts. (0 12 35 0, #434D65 14%) */
+  --shadow-xl: 0 15px 48px 0 rgba(67, 77, 101, 0.17); /* Level 5 — modals and dialogs, the highest layer. (0 15 48 0, #434D65 17%) */
+  --focus-ring: 0 0 0 3px rgba(119, 161, 255, 0.5); /* Focus state of Button and Input: `ring-3 ring-ring/50` plus a `ring` border. */
+}
+:root {
+  --space-1: 4px; /* `1` — 4px: tight icon gaps. */
+  --space-2: 8px; /* `2` — 8px: form field stack (`space-y-2`), button groups. */
+  --space-3: 12px; /* `3` — 12px: small card padding. */
+  --space-4: 16px; /* `4` — 16px: inside a section (`space-y-4`), card and dialog padding. */
+  --space-6: 24px; /* `6` — 24px: page gutter (`px-6`). */
+  --space-8: 32px; /* `8` — 32px: large gaps. */
+  --space-12: 48px; /* `12` — 48px: between page sections (`space-y-12`). */
+  --radius: 8px; /* Base radius (`--radius`, 0.625rem); every step below is derived from it. */
+  --radius-sm: 6px; /* `rounded-sm` — radius × 0.6. Buttons at 28px (sm, icon-sm). */
+  --radius-md: 8px; /* `rounded-md` — radius × 0.8. Buttons at 32px (default, icon) and Input. */
+  --radius-lg: 10px; /* `rounded-lg` — Buttons at 36px (lg, icon-lg), table wrapper. */
+  --radius-xl: 14px; /* `rounded-xl` — Card, Dialog. */
+  --radius-2xl: 18px; /* `rounded-2xl` — radius × 1.8. */
+  --radius-3xl: 22px; /* `rounded-3xl` — radius × 2.2. */
+  --radius-4xl: 26px; /* `rounded-4xl` — pills. */
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --text-text-h1: 600 28px/38px var(--font-sans); /* Page title. */
+  --text-text-h2: 600 24px/36px var(--font-sans); /* Section title on large pages. */
+  --text-text-h3-600: 600 18px/28px var(--font-sans); /* Section heading. */
+  --text-text-h3: 500 18px/28px var(--font-sans); /* Softer section heading. */
+  --text-text-h4-600: 600 16px/26px var(--font-sans); /* Card title, modal title. */
+  --text-text-h4: 500 16px/26px var(--font-sans); /* Sub heading. */
+  --text-text-h5: 400 16px/26px var(--font-sans); /* Large body / lead text. */
+  --text-text-h6-600: 600 15px/24px var(--font-sans); /* Small heading. */
+  --text-text-h6: 500 15px/24px var(--font-sans); /* Small heading, soft. */
+  --text-text-h7: 400 15px/22px var(--font-sans); /* Small lead text. */
+  --text-text-body-600-xl: 600 14px/22px var(--font-sans); /* Emphasised body, labels. */
+  --text-text-body-500-xl: 500 14px/22px var(--font-sans); /* Nav items and emphasised 14px text. */
+  --text-text-paragraph-400-xl: 400 14px/22px var(--font-sans); /* Default body text. */
+  --text-text-body-700-l: 700 13px/20px var(--font-sans); /* Strong small text, numbers. */
+  --text-text-body-600-l: 600 13px/20px var(--font-sans); /* Table header. */
+  --text-text-body-500-l: 500 13px/20px var(--font-sans); /* Buttons (all sizes), form labels; Table cell (key column), tags. */
+  --text-text-paragraph-400-l: 400 13px/20px var(--font-sans); /* Table cell, descriptions. */
+  --text-text-body-600-m: 600 12px/18px var(--font-sans); /* Small emphasis. */
+  --text-text-body-500-m: 500 12px/18px var(--font-sans); /* Meta labels. */
+  --text-text-paragraph-400-m: 400 12px/18px var(--font-sans); /* Helper text, captions; error text with `text-destructive`. */
+  --text-text-body-500-s: 500 10px/16px var(--font-sans); /* Tiny labels. */
+  --text-text-paragraph-400-s: 400 10px/16px var(--font-sans); /* Tiny captions, legal. */
+}
+.text-h1 {
+  font-family: var(--font-sans);
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+.text-h2 {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+.text-h3-600 {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+.text-h3 {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+.text-h4-600 {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+.text-h4 {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+.text-h5 {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+.text-h6-600 {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+.text-h6 {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+.text-h7 {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+.text-body-600-xl {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+.text-body-500-xl {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+.text-paragraph-400-xl {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+.text-body-700-l {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+.text-body-600-l {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+.text-body-500-l {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+.text-paragraph-400-l {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+.text-body-600-m {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+.text-body-500-m {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+.text-paragraph-400-m {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+.text-body-500-s {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+.text-paragraph-400-s {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}

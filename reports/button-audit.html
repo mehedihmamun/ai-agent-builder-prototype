@@ -1,0 +1,225 @@
+<title>Prototype Button Audit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column. Verdict first, then live samples per button family, then the gaps to decide on. Button samples use the REVE Chat values exactly as the prototype renders them. */
+:root {
+  --bg: #f5f7f8; --surface: #ffffff; --fg: #253748; --muted: #4d657c; --faint: #6f8294; --line: #e6eaed; --track: #eff2f4;
+  --accent: #004fff; --ok: #088114; --ok-soft: #e8f6e9; --warn: #8a5a0c; --warn-soft: #fdf0dc; --bad: #b10606; --bad-soft: #fbe8e8;
+  --stage: #ffffff; --stage-line: #e6eaed;
+  --font: Inter, ui-sans-serif, system-ui, sans-serif; --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121a22; --surface: #1a2530; --fg: #e8eef3; --muted: #b2bbc5; --faint: #909fac; --line: #2a3846; --track: #24313d;
+  --accent: #77a1ff; --ok: #a3daa8; --ok-soft: #1c3322; --warn: #f8d195; --warn-soft: #3a3020; --bad: #f0a6a6; --bad-soft: #3a1d22;
+  --stage: #ffffff; --stage-line: #2a3846; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #121a22; --surface: #1a2530; --fg: #e8eef3; --muted: #b2bbc5; --faint: #909fac; --line: #2a3846; --track: #24313d;
+  --accent: #77a1ff; --ok: #a3daa8; --ok-soft: #1c3322; --warn: #f8d195; --warn-soft: #3a3020; --bad: #f0a6a6; --bad-soft: #3a1d22;
+  --stage: #ffffff; --stage-line: #2a3846; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 400 14px/22px var(--font); }
+.wrap { max-width: 1040px; margin: 0 auto; padding-block: 32px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1 { font-size: 28px; line-height: 38px; font-weight: 600; margin: 0; text-wrap: balance; }
+h2 { font-size: 18px; line-height: 28px; font-weight: 600; margin: 0 0 4px; }
+h3 { font-size: 15px; line-height: 24px; font-weight: 600; margin: 0; }
+p { margin: 0; }
+.lede { color: var(--muted); max-width: 70ch; margin-top: 8px; }
+.eyebrow { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); font-weight: 500; }
+code { font-family: var(--mono); font-size: 12px; background: var(--track); padding: 1px 5px; border-radius: 4px; }
+section { margin-top: 44px; }
+.sub { color: var(--muted); margin: 0 0 16px; max-width: 72ch; }
+.verdict { margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.v { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.v b { display: block; font-size: 15px; line-height: 24px; }
+.v span { color: var(--muted); font-size: 13px; line-height: 20px; }
+.pill { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; border-radius: 999px; padding: 1px 8px; margin-bottom: 6px; }
+.p-ok { background: var(--ok-soft); color: var(--ok); } .p-warn { background: var(--warn-soft); color: var(--warn); } .p-bad { background: var(--bad-soft); color: var(--bad); }
+.family { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin-bottom: 12px; }
+.family-head { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+.family-head .meta { color: var(--faint); font-size: 12px; font-family: var(--mono); }
+.stage { background: var(--stage); padding: 18px 16px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; border-bottom: 1px solid var(--stage-line); }
+.rows { display: grid; }
+.row { display: grid; grid-template-columns: 170px 1fr 1fr; gap: 12px; padding: 8px 16px; border-top: 1px solid var(--line); font-size: 13px; line-height: 20px; }
+.row:first-child { border-top: 0; }
+.row .k { color: var(--faint); }
+.row .bad { color: var(--bad); font-weight: 500; }
+.where { padding: 10px 16px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
+.cap { font-size: 11px; color: #6f8294; display: block; text-align: center; margin-top: 4px; font-family: var(--mono); }
+.sample { display: inline-flex; flex-direction: column; align-items: center; }
+.issues { display: grid; gap: 10px; }
+.issue { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--warn); border-radius: 10px; padding: 14px 16px; }
+.issue.hi { border-left-color: var(--bad); } .issue.lo { border-left-color: var(--faint); }
+.issue p { color: var(--muted); margin-top: 4px; }
+.issue .ask { color: var(--fg); }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 8px 14px; border-top: 1px solid var(--line); vertical-align: top; }
+th { border-top: 0; color: var(--faint); font-weight: 600; font-size: 12px; }
+.table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+td.samp { background: var(--stage); white-space: nowrap; }
+footer { margin-top: 48px; color: var(--faint); font-size: 12px; }
+
+/* ---- Button samples: exact values the prototype renders (REVE Chat tokens) ---- */
+.b { font: 500 13px/20px var(--font); display: inline-flex; align-items: center; justify-content: center; gap: 6px; white-space: nowrap; border: 0; cursor: default; padding: 0 10px; color: #4d657c; background: transparent; }
+.b svg { width: 16px; height: 16px; flex: none; }
+.sm { height: 28px; border-radius: 6px; } .md { height: 32px; border-radius: 8px; } .lg { height: 36px; border-radius: 10px; }
+.isq { width: 28px; padding: 0; } .imd { width: 32px; padding: 0; }
+.primary { background: #004fff; color: #fff; }
+.secondary { background: #eff2f4; color: #4d657c; }
+.outline { background: #fff; color: #4d657c; box-shadow: inset 0 0 0 1px #e6eaed; }
+.ghost { background: transparent; color: #4d657c; }
+.dis { opacity: .5; }
+.dis-spec-primary { background: #c7ddff; color: #fff; }
+.dis-proto-send { background: #77a1ff; color: #fff; }
+.dis-spec-secondary { background: #f5f7f8; color: #b2bbc5; }
+.dis-spec-ghost { color: #b2bbc5; }
+.round { border-radius: 999px; }
+.c-composer { width: 36px; height: 36px; padding: 0; border-radius: 999px; background: #eff2f4; color: #4d657c; }
+.c-tool { width: 32px; height: 32px; padding: 0; border-radius: 999px; color: #4d657c; }
+.c-add-step { width: 44px; height: 44px; padding: 0; border-radius: 999px; background: #253748; color: #fff; box-shadow: 0 7px 25px rgba(67,77,101,.14); }
+.c-add-node { width: 24px; height: 24px; padding: 0; border-radius: 6px; color: #253748; box-shadow: inset 0 0 0 1px #b2bbc5; background: #fff; }
+.spec-add { width: 28px; height: 28px; padding: 0; border-radius: 999px; background: #fff; color: #253748; box-shadow: inset 0 0 0 1px #e6eaed, 0 2px 3px rgba(40,46,61,.12); }
+.c-chip { height: 34px; padding: 0 12px; border-radius: 999px; background: #fff; color: #4d657c; box-shadow: inset 0 0 0 1px #e6eaed; font-weight: 400; }
+.c-tab { height: 26px; padding: 0 10px; border-radius: 999px; font-size: 12px; line-height: 18px; color: #4d657c; }
+.c-tab.on { background: #eff2f4; color: #253748; }
+.c-reply { width: 28px; height: 28px; padding: 0; border-radius: 8px; color: #4d657c; }
+.c-name { font: 600 14px/22px var(--font); color: #253748; padding: 2px 6px; height: 26px; border-radius: 6px; }
+.c-spark { width: 32px; height: 32px; padding: 0; border-radius: 999px; background: radial-gradient(circle at 32% 28%, #c4c3fd 0%, #6c69f9 55%, #154f94 100%); color: #fff; }
+@media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M7 4v16l13-8z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6.5A2.5 2.5 0 0 0 4 21.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11.5 21 3l-8.5 18-2-7.5z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m21 11-9 9a5 5 0 0 1-7-7l9-9a3 3 0 0 1 4 4l-9 9a1 1 0 0 1-1.5-1.5L16 7"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></symbol>
+  <symbol id="i-zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.2 6.8L21 11l-6.8 2.2L12 20l-2.2-6.8L3 11l6.8-2.2z"/></symbol>
+</svg>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">AI Agent Builder prototype · REVE Chat design system · Button</span>
+    <h1>Prototype Button Audit</h1>
+    <p class="lede">Every button in the prototype, measured in the browser and in the Figma frames, compared with your design system's Button (guidelines V2.0 and the code in its bundle). The samples below use the exact values the prototype renders. Nothing has been changed yet.</p>
+    <div class="verdict">
+      <div class="v"><span class="pill p-ok">Not bold</span><b>All button text is 13/20 Medium (500)</b><span>Same in the browser and in Figma (Inter Medium 13px). Nothing uses 600 or 700, except the agent name in the builder header, which is a heading you click to rename.</span></div>
+      <div class="v"><span class="pill p-ok">Matches</span><b>34 design system buttons</b><span>Sizes 28 / 32px with 6 / 8px radius and the Primary, Secondary, Outline and Ghost colors all match the spec.</span></div>
+      <div class="v"><span class="pill p-ok">Fixed</span><b>Disabled uses guideline tints</b><span>Every disabled button now uses its variant's lighter tint instead of a 50% fade. The design system bundle itself still fades, so the prototype sets the tints.</span></div>
+      <div class="v"><span class="pill p-warn">Hand-made</span><b>33 custom buttons</b><span>Round chat and canvas buttons, chips, tabs and a few icon buttons are not design system Buttons. Most have no matching variant yet.</span></div>
+    </div>
+  </header>
+
+  <section id="ds">
+    <h2>Design system buttons in use</h2>
+    <p class="sub">These use the design system <code>Button</code> directly. Each family shows real labels from the prototype, then spec vs. what renders.</p>
+
+    <div class="family">
+      <div class="family-head"><h3>Primary · <code>default</code></h3><span class="meta">9 places · sizes sm, default, icon-sm</span></div>
+      <div class="stage">
+        <span class="sample"><span class="b sm primary"><svg><use href="#i-plus"/></svg>Create agent</span><span class="cap">sm 28</span></span>
+        <span class="sample"><span class="b sm primary">Save</span><span class="cap">sm 28</span></span>
+        <span class="sample"><span class="b sm primary"><svg><use href="#i-play"/></svg>Test now</span><span class="cap">sm 28</span></span>
+        <span class="sample"><span class="b md primary">Use this template</span><span class="cap">default 32</span></span>
+        <span class="sample"><span class="b md primary">Next</span><span class="cap">default 32</span></span>
+        <span class="sample"><span class="b sm isq dis-spec-primary"><svg><use href="#i-send"/></svg></span><span class="cap">send, disabled</span></span>
+      </div>
+      <div class="rows">
+        <div class="row"><span class="k">Text</span><span>Spec 13/20 Medium</span><span>13/20 Medium ✓</span></div>
+        <div class="row"><span class="k">Fill / hover</span><span>blue-90 / blue-100</span><span>blue-90 / blue-100 ✓</span></div>
+        <div class="row"><span class="k">Radius</span><span>6px at 28, 8px at 32</span><span>6px / 8px ✓</span></div>
+        <div class="row"><span class="k">Disabled</span><span>blue-40 tint, white text</span><span>blue-40 tint, white text ✓ (fixed 5 Nov)</span></div>
+      </div>
+      <div class="where">Create agent (AI Agents, Templates), Save, Test now (Builder panel summary), Use this template, Next (intro), Add (attach link), Next (question card), Create agent send button.</div>
+    </div>
+
+    <div class="family">
+      <div class="family-head"><h3>Secondary · <code>secondary</code></h3><span class="meta">8 places · sizes sm, default, icon-sm</span></div>
+      <div class="stage">
+        <span class="sample"><span class="b sm secondary"><svg><use href="#i-book"/></svg>Explore template</span><span class="cap">sm 28</span></span>
+        <span class="sample"><span class="b sm secondary">Learn more</span><span class="cap">sm 28</span></span>
+        <span class="sample"><span class="b sm secondary"><svg><use href="#i-play"/></svg>Test now</span><span class="cap">sm · active</span></span>
+        <span class="sample"><span class="b md secondary">Cancel</span><span class="cap">default 32</span></span>
+        <span class="sample"><span class="b md dis-spec-secondary">Previous</span><span class="cap">disabled</span></span>
+      </div>
+      <div class="rows">
+        <div class="row"><span class="k">Fill / text</span><span>offwhite-60 / gray-100</span><span>offwhite-60 / gray-100 ✓</span></div>
+        <div class="row"><span class="k">Hover</span><span>offwhite-100</span><span>offwhite-100 ✓</span></div>
+        <div class="row"><span class="k">Disabled</span><span>offwhite-40, text gray-40</span><span>offwhite-40, text gray-40 ✓ (fixed 5 Nov)</span></div>
+      </div>
+      <div class="where">Explore template, Learn more, Cancel (drawer), Previous (intro), Version history, Test now when its panel is open, attach menu trigger, question card Next while disabled.</div>
+    </div>
+
+    <div class="family">
+      <div class="family-head"><h3>Outline · <code>outline</code></h3><span class="meta">4 places · sizes sm, icon-sm</span></div>
+      <div class="stage">
+        <span class="sample"><span class="b sm outline"><svg><use href="#i-book"/></svg>Browse all templates</span><span class="cap">sm 28</span></span>
+        <span class="sample"><span class="b sm outline">Review on canvas</span><span class="cap">sm 28</span></span>
+        <span class="sample"><span class="b sm isq outline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M7 12h10M10 18h4"/></svg></span><span class="cap">icon-sm · Filter</span></span>
+      </div>
+      <div class="rows">
+        <div class="row"><span class="k">Fill / border / text</span><span>white / offwhite-100 / gray-100</span><span>white / offwhite-100 / gray-100 ✓</span></div>
+        <div class="row"><span class="k">Hover</span><span>offwhite-40</span><span>offwhite-40 ✓</span></div>
+      </div>
+      <div class="where">Browse all templates, Review on canvas, Filter, and the Prototype demo button (not product UI).</div>
+    </div>
+
+    <div class="family">
+      <div class="family-head"><h3>Ghost · <code>ghost</code></h3><span class="meta">11 places · sizes sm, icon-sm</span></div>
+      <div class="stage">
+        <span class="sample"><span class="b sm ghost">Clear chat</span><span class="cap">sm 28</span></span>
+        <span class="sample"><span class="b sm ghost">Hide log</span><span class="cap">sm 28</span></span>
+        <span class="sample"><span class="b sm ghost">Skip</span><span class="cap">sm 28</span></span>
+        <span class="sample"><span class="b sm isq ghost"><svg><use href="#i-x"/></svg></span><span class="cap">icon-sm · Close</span></span>
+        <span class="sample"><span class="b sm isq ghost"><svg><use href="#i-mic"/></svg></span><span class="cap">icon-sm · Mic</span></span>
+        <span class="sample"><span class="b sm dis-spec-ghost">Clear chat</span><span class="cap">disabled</span></span>
+      </div>
+      <div class="rows">
+        <div class="row"><span class="k">Fill / text</span><span>transparent / gray-100</span><span>transparent / gray-100 ✓</span></div>
+        <div class="row"><span class="k">Hover</span><span>offwhite-60</span><span>muted (offwhite-40) ≈</span></div>
+        <div class="row"><span class="k">Disabled</span><span>text gray-40</span><span>text gray-40 ✓ (fixed 5 Nov)</span></div>
+      </div>
+      <div class="where">Back, More actions, panel Close and Expand, Clear chat, Hide log, Skip, mic in the prompt box, drawer Close, sidebar collapse, Cancel in the attach link form.</div>
+    </div>
+  </section>
+
+  <section id="custom">
+    <h2>Hand-made buttons</h2>
+    <p class="sub">Built with a plain <code>&lt;button&gt;</code> and their own classes, so they don't follow the Button spec. Grouped by look.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Sample</th><th>What</th><th>Size · radius · text</th><th>Closest in the spec</th></tr></thead>
+      <tbody>
+        <tr><td class="samp"><span class="b c-composer"><svg><use href="#i-clip"/></svg></span> <span class="b c-composer" style="background:#004fff;color:#fff"><svg><use href="#i-send"/></svg></span></td><td>Chat composer: attach, mic, send, stop</td><td>36px round · icon only</td><td><code>secondary</code> / <code>default</code> at <code>icon-lg</code> (36px, but 10px radius, not round)</td></tr>
+        <tr><td class="samp"><span class="b c-tool"><svg><use href="#i-zoom"/></svg></span></td><td>Canvas toolbar: tidy, zoom, fit, language, help, undo, redo</td><td>32px round · icon only</td><td><code>ghost</code> at <code>icon</code> (32px, 8px radius)</td></tr>
+        <tr><td class="samp"><span class="b c-add-step"><svg><use href="#i-plus"/></svg></span></td><td>Canvas "Add a step" (top right)</td><td>44px round · black</td><td>No match. Spec's <code>add</code> is white and round</td></tr>
+        <tr><td class="samp"><span class="b c-add-node"><svg><use href="#i-plus"/></svg></span> → <span class="b spec-add"><svg><use href="#i-plus"/></svg></span></td><td>Canvas "+" on nodes (left: now, right: spec <code>add</code>)</td><td>20–24px · 6px radius · gray-40 border</td><td><code>add</code> at <code>icon-sm</code>: 28px round, white, primary on hover. The prototype asks for <code>add</code>, but the bundle doesn't have it yet</td></tr>
+        <tr><td class="samp"><span class="b c-chip">Where is my order #1042?</span></td><td>Example and suggestion chips (prompt box, Test Flow, assistant follow-ups)</td><td>30–34px pill · 13/20 Regular</td><td>No chip in the spec. Regular weight on purpose (they're prompts, not commands)</td></tr>
+        <tr><td class="samp"><span class="b c-tab on">Store</span><span class="b c-tab">Platform</span></td><td>Question card tabs</td><td>26px pill · 12/18 Medium</td><td>Spec has no 26px or 12px size. Closest: <code>ghost</code> <code>sm</code></td></tr>
+        <tr><td class="samp"><span class="b c-reply"><svg><use href="#i-copy"/></svg></span></td><td>Reply actions: copy, 👍, 👎</td><td>28px · 8px radius</td><td><code>ghost</code> <code>icon-sm</code> (28px, 6px radius)</td></tr>
+        <tr><td class="samp"><span class="b c-spark"><svg><use href="#i-spark"/></svg></span></td><td>Builder assistant (top bar)</td><td>32px round · gradient</td><td>Brand mark, no variant. Intended custom</td></tr>
+        <tr><td class="samp"><span class="b c-name">Shopify store management</span></td><td>Agent name in the builder header (click to rename)</td><td>26px · 14/22 <b>Semibold 600</b></td><td>Heading style, not a button style. The only "bold" text found</td></tr>
+        <tr><td class="samp"><span class="b c-composer" style="background:#004fff;color:#fff;width:40px;height:40px"><svg><use href="#i-play"/></svg></span></td><td>Intro popup play button</td><td>76px round</td><td>Media control, no variant</td></tr>
+      </tbody>
+    </table></div>
+    <p class="sub" style="margin-top:12px">Not listed: sidebar menu items, the icon rail, tabs and switches. Those are other design system components (Navbar, Tabs, Switch, ViewToggle).</p>
+  </section>
+
+  <section id="decide">
+    <h2>For you to decide</h2>
+    <div class="issues">
+      <div class="issue lo"><h3>1. Disabled buttons: tint or fade? · <span style="color:var(--ok)">Decided: tints, applied</span></h3><p>Your Button guidelines (V2.0) say a lighter tint per variant, e.g. Primary blue-40, Secondary offwhite-40 with gray-40 text, Ghost gray-40 text. Your design system's bundle code still uses a 50% fade. The prototype follows the code, so every disabled button fades.</p><p class="ask"><b>Option:</b> override the disabled state in the prototype to match the guidelines, or update the design system bundle first so every product gets it.</p></div>
+      <div class="issue lo"><h3>2. Disabled send button · <span style="color:var(--ok)">Now blue-40, per the guidelines</span></h3><p>It replaces the Blue 60 from the Figma review, so it matches every other disabled Primary button.</p></div>
+      <div class="issue"><h3>3. Canvas "+" buttons should use the <code>add</code> variant</h3><p>The guidelines define <code>add</code>: 28px, round, white, turning primary on hover. The prototype already asks for <code>add</code>, but the bundle doesn't have that variant yet, so the button falls back to a small 20–24px square with a gray border.</p></div>
+      <div class="issue"><h3>4. Round icon buttons</h3><p>The chat composer (36px) and canvas toolbar (32px) buttons are round. The spec's icon buttons have 8–10px radius. Round may be the intended look for chat and canvas, but it isn't in the spec.</p></div>
+      <div class="issue"><h3>5. Black "Add a step" button</h3><p>A 44px black round button sits on the canvas. There's no matching variant, and the spec's <code>add</code> is white.</p></div>
+      <div class="issue lo"><h3>6. Label casing · <span style="color:var(--ok)">Decided: sentence case, applied</span></h3><p>Button labels use sentence case: only the first letter is capital ("Create agent", "Learn more", "Explore template", "Browse all templates"). Names keep their capitals (WhatsApp, Shopify, AI).</p></div>
+    </div>
+  </section>
+
+  <footer>Measured on 5 Nov 2026 in the running prototype (1440×900) and in the Figma frames on page "Lab 2". Spec: REVE Chat Design System, components/Button (README V2.0 and bundle.js).</footer>
+</div>
