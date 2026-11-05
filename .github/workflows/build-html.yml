@@ -1,0 +1,40 @@
+# Builds the single-file HTML export of the prototype on every push to main and
+# attaches it to the run (GitHub → Actions → the run → Artifacts), for teammates to download.
+#
+# Deploying is done by Vercel's own GitHub connection (project ai-agent-builder-prototype):
+# push to main → https://ai-agent-builder-prototype.vercel.app, other branches → preview links.
+name: Build downloadable HTML
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: build-html
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: prototype/package-lock.json
+
+      - name: Install
+        run: npm --prefix prototype ci
+
+      - name: Build the single-file HTML
+        run: npm --prefix prototype run build:share
+
+      - name: Attach the downloadable HTML file
+        uses: actions/upload-artifact@v4
+        with:
+          name: AI-Agent-Builder-Prototype
+          path: prototype/dist-share/index.html
+          retention-days: 30
