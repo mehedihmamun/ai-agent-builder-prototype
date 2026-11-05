@@ -15,3 +15,5 @@ share/
 # OS / editor
 .DS_Store
 .claude/settings.local.json
+.vercel
+.env*

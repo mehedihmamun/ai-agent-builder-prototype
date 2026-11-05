@@ -49,13 +49,13 @@ Creates `../share/AI-Agent-Builder-Prototype.html`: the whole prototype in one f
 Teammates double-click it to open it in Chrome, Edge or Safari. Links use `#/…` so they work from disk.
 Each person's demo data stays in their own browser. Fonts load from Google Fonts when online; offline it falls back to a system font.
 
-## Public link (Vercel)
+## Public link (Vercel, automatic)
 
-Live at **https://ai-agent-builder-prototype.vercel.app** (Vercel project `ai-agent-builder-prototype`, deployed from `../share/site`).
+Live at **https://ai-agent-builder-prototype.vercel.app**.
 
-To update it after changes:
+The GitHub repo `mehedihmamun/ai-agent-builder-prototype` is connected to the Vercel project `ai-agent-builder-prototype`:
 
-```bash
-npm run build:share
-cd ../share/site && npx vercel deploy --prod --yes
-```
+- **Push to `main`** → Vercel builds (`vercel.json`: `npm --prefix prototype run build:share`) and updates the live link in about a minute.
+- **Push another branch / open a PR** → Vercel gives it its own preview link; the live link doesn't change until it's merged.
+
+For a downloadable file, run `npm run build:share` locally: it writes `../share/AI-Agent-Builder-Prototype.html`.
