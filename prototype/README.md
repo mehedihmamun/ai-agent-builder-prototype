@@ -53,9 +53,8 @@ Each person's demo data stays in their own browser. Fonts load from Google Fonts
 
 Live at **https://ai-agent-builder-prototype.vercel.app**.
 
-The GitHub repo `mehedihmamun/ai-agent-builder-prototype` is connected to the Vercel project `ai-agent-builder-prototype`:
+A GitHub Action (`.github/workflows/deploy.yml`) deploys it:
 
-- **Push to `main`** → Vercel builds (`vercel.json`: `npm --prefix prototype run build:share`) and updates the live link in about a minute.
-- **Push another branch / open a PR** → Vercel gives it its own preview link; the live link doesn't change until it's merged.
-
-For a downloadable file, run `npm run build:share` locally: it writes `../share/AI-Agent-Builder-Prototype.html`.
+- **Push to `main`** → the action builds with `vercel.json` (`npm --prefix prototype run build:share`) and deploys to the Vercel project `ai-agent-builder-prototype`; the live link updates in a few minutes.
+- **Downloadable file:** each run attaches **AI-Agent-Builder-Prototype** (the single HTML file) under GitHub → Actions → the run → Artifacts. Locally, `npm run build:share` writes `../share/AI-Agent-Builder-Prototype.html`.
+- **Secrets** (repo settings): `VERCEL_TOKEN` (owner's token from vercel.com/account/tokens), `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`. If deploys start failing with an auth error, the token expired: create a new one and run `gh secret set VERCEL_TOKEN --repo mehedihmamun/ai-agent-builder-prototype`.
